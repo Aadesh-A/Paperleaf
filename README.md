@@ -1,23 +1,26 @@
-# Cecilia's Notes
+# Paperleaf
 
-A Zara-editorial, handwriting-first note-taking app for **iPad, iPhone, and Mac** — one SwiftUI codebase, SwiftData + CloudKit for sync, MultipeerConnectivity for local peer sync. Zero third-party dependencies, no backend, no telemetry.
+A handwriting-first notebook app for **iPad, iPhone, and Mac**. Paperleaf combines Apple Pencil ink, PDFs, typed content, images, recordings, study tools, and local-first sync in one native SwiftUI codebase.
+
+Paperleaf is a redesign and feature fork of [Cecilia's Notes](https://github.com/TheProductArchitect/cecilias-notes), used under its MIT license. The upstream copyright and license are preserved in [`LICENSE`](LICENSE). Internal `CeciliasNotes` module and archive names intentionally remain in this first fork revision so existing documents and migrations continue to work.
 
 <sub>iPad is the source of truth: full canvas + Apple Pencil. iPhone drops handwriting but keeps everything else. Mac gets a Google-Docs-style **Doc Mode** so you can type, dictate, and use AI seamlessly — and a **Canvas Mode** to open notebooks exactly as they look on iPad.</sub>
 
 ---
 
-## Status
+## Fork status
 
-- **iPad:** shipping, TestFlight & App Store.
-- **iPhone:** shipping. Handwriting is intentionally not offered.
-- **Mac:** in verification. Doc Mode is the default writing surface; Canvas Mode preserves the iPad layout for mixed-content notebooks.
+- **iPad:** primary Paperleaf experience; requires an iOS simulator runtime or a provisioned device to run locally.
+- **iPhone:** companion library and editor; handwriting remains iPad-only.
+- **Mac:** builds successfully with Xcode 26.6; Doc Mode and Canvas Mode are available.
+- **Paperleaf additions:** original forest-and-paper visual system, new app icon and wordmark, Favorites rail, and persistent recent-search suggestions.
 
 For the full per-device flow inventory (155 flows across 25 domains, per-device status), see [`Documentation/USER_FLOWS.md`](Documentation/USER_FLOWS.md).
 
 ## Design principles
 
 1. **Handwriting-first on iPad.** Apple Pencil is the primary input; typed text, PDFs, images, and audio are equal citizens.
-2. **Editorial voice.** 8pt tracked-uppercase eyebrows, SF Heavy wordmarks, italic serif rows, 2pt selection rule. The chrome is quiet — never a permanent warning strip.
+2. **Paperleaf voice.** Warm paper surfaces, forest-green accents, rounded typography, and quiet chrome keep attention on the page.
 3. **Local-first.** No network calls, no backend, no analytics. Sync goes through the user's own iCloud account. Foundation Models inference runs on-device. Crash/hang diagnostics are OS-collected via MetricKit and written to the app's own Documents folder — the app transmits nothing.
 4. **One codebase.** Two Xcode targets share the design system, models, and services via `PBXFileSystemSynchronizedRootGroup`. Cross-platform code guards with `#if canImport(UIKit)` / `#if canImport(AppKit)`.
 5. **Zero third-party dependencies.** Everything is an Apple framework: SwiftUI, PencilKit, SwiftData, CloudKit, Vision, Speech, Foundation Models, WidgetKit, MultipeerConnectivity.
@@ -70,8 +73,8 @@ Requirements:
 Then:
 
 ```bash
-git clone https://github.com/TheProductArchitect/cecilias-notes.git
-cd cecilias-notes
+git clone <your-paperleaf-fork-url>
+cd <your-paperleaf-folder>
 open CeciliasNotes/CeciliasNotes.xcodeproj
 ```
 
@@ -110,4 +113,4 @@ Never file a security report as a public issue. Follow the private disclosure pr
 
 MIT — see [`LICENSE`](LICENSE). Copyright © 2026 Venu Gopinath.
 
-The MIT license is intentionally permissive. If you build something on top of Cecilia's Notes, we'd love to hear about it — but you don't owe us anything.
+The MIT license is intentionally permissive. If you build something on top of Paperleaf, we'd love to hear about it — but you don't owe us anything.

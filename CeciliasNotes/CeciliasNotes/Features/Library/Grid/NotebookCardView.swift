@@ -561,7 +561,7 @@ struct NotebookCardView: View {
         }
 
         // Full-fidelity share: a .ceciliabook carrying every element,
-        // editable and re-openable in Cecilia's Notes (AirDrop, Drive,
+        // editable and re-openable in Paperleaf (AirDrop, Drive,
         // Mail). Tapping the file on any device imports it as a copy.
         Button {
             viewModel.shareNotebookArchive(notebook)

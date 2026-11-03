@@ -47,11 +47,8 @@ struct BrandWordmark: View {
     /// `false` default.
     @Environment(\.theme) private var theme
 
-    /// The masthead inline composition: `[name]'s notes·` with the name
-    /// auto-sized by length and "notes·" pinned at 18 pt.
-    /// `compact` (default false) ratchets every size tier down so the
-    /// wordmark fits a 96pt iPhone masthead band — the iPad band
-    /// (180pt) still uses the full 72pt-down-to-38pt sequence.
+    /// Paperleaf's masthead composition. The product name is stable while
+    /// the small personal line keeps the library feeling owned by the user.
     init(userName: String, compact: Bool = false) {
         self.mode = .inline(userName: userName)
         self.compact = compact
@@ -79,32 +76,29 @@ struct BrandWordmark: View {
 
     @ViewBuilder
     private func inlineBody(userName: String) -> some View {
-        let possessive = NameFormatter.mastheadPossessive(for: userName)
-        let nameSize   = computedNameSize(for: userName)
-        // Baseline alignment carries through across name-size tiers
-        // automatically — `firstTextBaseline` aligns the bottoms of
-        // the largest line of text in each child, so the 18 pt
-        // "notes·" sits on the same baseline as a 72 pt "venu's" or a
-        // 38 pt long-name.
-        HStack(alignment: .firstTextBaseline, spacing: 6) {
-            Text(possessive)
-                .font(.system(size: nameSize, weight: .heavy))
-                .tracking(-0.05 * nameSize)
+        let owner = NameFormatter.normalised(userName)
+        let productSize: CGFloat = compact ? 32 : 56
+        HStack(alignment: .firstTextBaseline, spacing: compact ? 8 : 12) {
+            Image(systemName: "leaf.fill")
+                .font(.system(size: compact ? 15 : 21, weight: .semibold))
+                .foregroundStyle(brandAccent)
+
+            Text("paperleaf")
+                .font(.system(size: productSize, weight: .heavy, design: .rounded))
+                .tracking(-0.045 * productSize)
                 .foregroundStyle(nameColor)
                 .lineLimit(1)
-                .minimumScaleFactor(scaleFloor(for: nameSize))
+                .minimumScaleFactor(0.72)
 
-            HStack(spacing: 0) {
-                Text("notes")
-                    .foregroundStyle(notesColor)
-                Text("·")  // U+00B7 MIDDLE DOT
-                    .foregroundStyle(brandAccent)
-            }
-            .font(.system(size: compact ? 12 : 18, weight: .regular))
-            .tracking(-0.2)
+            Text(owner.isEmpty ? "your notebook library" : "\(owner.lowercased())'s library")
+                .font(.system(size: compact ? 10 : 13, weight: .semibold, design: .rounded))
+                .tracking(0.8)
+                .textCase(.uppercase)
+                .foregroundStyle(notesColor)
+                .lineLimit(1)
         }
         .accessibilityElement(children: .ignore)
-        .accessibilityLabel("Wordmark \(possessive) notes")
+        .accessibilityLabel(owner.isEmpty ? "Paperleaf" : "Paperleaf, \(owner)'s library")
     }
 
     // MARK: Letter preview

@@ -1,5 +1,5 @@
 
-> You are working inside the Cecilia's Notes iOS/iPadOS/macOS repository. Your job is to verify every applicable user flow across all three devices — iPad, iPhone, Mac — and either fix or reliably report every gap. iPad is the source of truth. iPhone adapts iPad's flows to a compact form factor and drops what needs an Apple Pencil. Mac adapts iPad's flows to a keyboard-first, windowed model and benchmarks against Granola for capture surfaces.
+> You are working inside the Paperleaf iOS/iPadOS/macOS repository. Your job is to verify every applicable user flow across all three devices — iPad, iPhone, Mac — and either fix or reliably report every gap. iPad is the source of truth. iPhone adapts iPad's flows to a compact form factor and drops what needs an Apple Pencil. Mac adapts iPad's flows to a keyboard-first, windowed model and benchmarks against Granola for capture surfaces.
 >
 > **Read these three files first, in this order, before doing anything else:**
 > 1. `Documentation/PROJECT_STATE.md` — current phase, wire diagram, debug playbook.

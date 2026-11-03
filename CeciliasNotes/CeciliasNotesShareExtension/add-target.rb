@@ -23,9 +23,9 @@ require 'xcodeproj'
 PROJECT_PATH = File.expand_path('../CeciliasNotes.xcodeproj', __dir__)
 EXT_FOLDER   = File.expand_path(__dir__)
 EXT_NAME     = 'CeciliasNotesShareExtension'
-EXT_BUNDLE   = 'app.ceciliasnotes.share'
+EXT_BUNDLE   = 'com.aadesh.paperleaf.share'
 HOST_TARGET  = 'CeciliasNotes'
-APP_GROUP    = 'group.app.ceciliasnotes'
+APP_GROUP    = 'group.com.aadesh.paperleaf'
 TEAM_ID      = 'W9559HJWN9'
 DEPLOYMENT   = '17.6'
 

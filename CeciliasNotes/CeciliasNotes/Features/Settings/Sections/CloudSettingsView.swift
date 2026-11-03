@@ -85,7 +85,7 @@ struct CloudSettingsView: View {
                 Task { try? await cloud.enable() }
             }
         } message: {
-            Text("Your notebooks will appear in the Files app under Cecilia's Notes.")
+            Text("Your notebooks will appear in the Files app under Paperleaf.")
         }
         .alert("Disable iCloud sync?", isPresented: $pendingDisable) {
             Button("Cancel", role: .cancel) {}
@@ -193,7 +193,7 @@ struct CloudSettingsView: View {
         .alert("Relaunch the app", isPresented: $pendingDatabaseSyncRelaunch) {
             Button("OK", role: .cancel) {}
         } message: {
-            Text("Force-quit and relaunch Cecilia's Notes for the database-sync change to take effect.")
+            Text("Force-quit and relaunch Paperleaf for the database-sync change to take effect.")
         }
     }
 
@@ -269,7 +269,7 @@ struct CloudSettingsView: View {
 
     private func refreshAccountStatus() async {
         let status: CKAccountStatus = await withCheckedContinuation { cont in
-            CKContainer(identifier: "iCloud.app.ceciliasnotes")
+            CKContainer(identifier: "iCloud.com.aadesh.paperleaf")
                 .accountStatus { status, _ in
                     cont.resume(returning: status)
                 }
@@ -368,7 +368,7 @@ struct CloudSettingsView: View {
     }
 
     private func refreshAccountIdentity() async {
-        let container = CKContainer(identifier: "iCloud.app.ceciliasnotes")
+        let container = CKContainer(identifier: "iCloud.com.aadesh.paperleaf")
         let status: CKAccountStatus = await withCheckedContinuation { cont in
             container.accountStatus { status, _ in cont.resume(returning: status) }
         }

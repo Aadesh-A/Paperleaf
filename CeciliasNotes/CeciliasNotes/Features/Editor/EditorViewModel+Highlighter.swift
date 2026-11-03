@@ -1,5 +1,5 @@
 /// EditorViewModel+Highlighter.swift
-/// Cecilia's Notes
+/// Paperleaf
 ///
 /// Stroke interception for the highlighter family on PDF pages.
 /// When the user completes a stroke with a highlighter-family tool

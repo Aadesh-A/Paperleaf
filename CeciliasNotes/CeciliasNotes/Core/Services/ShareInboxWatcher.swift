@@ -32,7 +32,7 @@ final class ShareInboxWatcher {
     static let shared = ShareInboxWatcher()
     private init() {}
 
-    private static let appGroupID = "group.app.ceciliasnotes"
+    private static let appGroupID = "group.com.aadesh.paperleaf"
     private static let inboxFolderName = "ShareInbox"
 
     private var didStart = false

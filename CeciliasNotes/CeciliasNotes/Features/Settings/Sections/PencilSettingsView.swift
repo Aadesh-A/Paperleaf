@@ -70,7 +70,7 @@ struct PencilSettingsView: View {
             }
             .background(theme.surface)
 
-            Text("Overrides your system Pencil settings when using Cecilia's Notes.")
+            Text("Overrides your system Pencil settings when using Paperleaf.")
                 .font(.ceciliasNotesCaption)
                 .foregroundColor(theme.foregroundSubtle)
         }

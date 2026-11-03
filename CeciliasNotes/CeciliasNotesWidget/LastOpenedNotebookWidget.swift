@@ -1,5 +1,5 @@
 /// LastOpenedNotebookWidget.swift
-/// Cecilia's Notes
+/// Paperleaf
 ///
 /// Retired during the design-language refresh. The current home /
 /// lock-screen widget set is defined in `NewNoteWidget.swift`.

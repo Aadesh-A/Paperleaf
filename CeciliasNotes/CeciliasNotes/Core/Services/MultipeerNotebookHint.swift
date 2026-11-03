@@ -16,7 +16,7 @@ import Foundation
 /// path — so a dropped payload costs latency, never data.
 enum MultipeerSendQueue {
     nonisolated private static let queue = DispatchQueue(
-        label: "app.ceciliasnotes.multipeer.send",
+        label: "com.aadesh.paperleaf.multipeer.send",
         qos: .userInitiated
     )
 

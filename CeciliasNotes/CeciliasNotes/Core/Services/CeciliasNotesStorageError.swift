@@ -11,7 +11,7 @@ public enum CeciliasNotesStorageError: LocalizedError {
     public var errorDescription: String? {
         switch self {
         case .modelContextUnavailable:
-            return "The data store is unavailable. Please restart Cecilia's Notes."
+            return "The data store is unavailable. Please restart Paperleaf."
         case .fileWriteFailed(let underlying):
             return "A file could not be written: \(underlying.localizedDescription)"
         case .fileSizeLimitExceeded:
@@ -28,7 +28,7 @@ public enum CeciliasNotesStorageError: LocalizedError {
     public var recoverySuggestion: String? {
         switch self {
         case .modelContextUnavailable:
-            return "Force-quit Cecilia's Notes and reopen it."
+            return "Force-quit Paperleaf and reopen it."
         case .fileWriteFailed:
             return "Check that the device has available storage."
         case .fileSizeLimitExceeded:

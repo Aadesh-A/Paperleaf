@@ -41,7 +41,7 @@ struct CeciliasNotesWidgetProvider: TimelineProvider {
 
     private static func readFromAppGroup() -> [NotebookSummary] {
         guard let url = FileManager.default
-            .containerURL(forSecurityApplicationGroupIdentifier: "group.app.ceciliasnotes")?
+            .containerURL(forSecurityApplicationGroupIdentifier: "group.com.aadesh.paperleaf")?
             .appendingPathComponent("ink_widget_data.json"),
               let data = try? Data(contentsOf: url),
               let arr  = try? JSONDecoder().decode([NotebookSummary].self, from: data)

@@ -72,7 +72,7 @@ final class VoiceNoteFlowUITests: XCTestCase {
             Thread.sleep(forTimeInterval: 0.5)
         }
 
-        // The "You have changed the icon for Cecilia's Notes" alert
+        // The "You have changed the icon for Paperleaf" alert
         // surfaces AFTER the personalising overlay clears — not
         // during onboarding, where completeOnboarding already looks
         // for it. It scrims the whole library; dismiss it or every

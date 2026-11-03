@@ -122,7 +122,7 @@ struct MacCloudSettingsView: View {
         .alert("Relaunch required", isPresented: $pendingDatabaseSyncRelaunch) {
             Button("OK", role: .cancel) {}
         } message: {
-            Text("Quit and reopen Cecilia's Notes for this change to take effect.")
+            Text("Quit and reopen Paperleaf for this change to take effect.")
         }
         .alert("Restore sync and relaunch?", isPresented: $pendingCloudKitRecoveryRelaunch) {
             Button("Cancel", role: .cancel) {}
@@ -131,7 +131,7 @@ struct MacCloudSettingsView: View {
                 relaunchApp()
             }
         } message: {
-            Text("Cecilia's Notes will quit and reopen with notebook sync re-enabled. Unsaved edits are saved automatically first.")
+            Text("Paperleaf will quit and reopen with notebook sync re-enabled. Unsaved edits are saved automatically first.")
         }
     }
 
@@ -175,7 +175,7 @@ struct MacCloudSettingsView: View {
     }
 
     private func refreshAccountStatus() async {
-        let status = try? await CKContainer(identifier: "iCloud.app.ceciliasnotes")
+        let status = try? await CKContainer(identifier: "iCloud.com.aadesh.paperleaf")
             .accountStatus()
         await MainActor.run { iCloudAccountStatus = status }
     }

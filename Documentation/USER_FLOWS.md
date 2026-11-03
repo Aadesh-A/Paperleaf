@@ -164,9 +164,9 @@ For the machine-queryable version see [`USER_FLOWS.yaml`](USER_FLOWS.yaml). For 
 - **Mac** `partial` — verify sheet presentation from a menu.
 
 ### 3.10 Pin / favourite notebook
-- **iPad** `missing` — **recommended** — top of grid, "★" affordance.
-- **iPhone** `missing`.
-- **Mac** `missing`.
+- **iPad** `implemented` — pin from the card menu; favourites appear in a dedicated starred rail at the top of the grid.
+- **iPhone** `implemented`.
+- **Mac** `implemented`.
 
 ### 3.11 Notebook preview / peek
 - **iPad** `implemented` — long-press = preview.
@@ -273,9 +273,9 @@ For the machine-queryable version see [`USER_FLOWS.yaml`](USER_FLOWS.yaml). For 
 - Covered in §3.9.
 
 ### 7.5 Search suggestions / recents
-- **iPad** `missing` — **recommended** — show recent searches on focus.
-- **iPhone** `missing`.
-- **Mac** `missing`.
+- **iPad** `implemented` — submitted searches are stored locally and shown on focus.
+- **iPhone** `implemented`.
+- **Mac** `implemented`.
 
 ---
 
@@ -831,7 +831,7 @@ _All iPad-only, by design. iPhone reads strokes but does not author (no Pencil).
 
 ## 25. Mac-only flows benchmarked to Granola
 
-_Granola's differentiator: fast, keyboard-first, meeting-centric capture. Cecilia's Notes is not a meeting app, but the Mac's job is "capture during work" and these idioms translate._
+_Granola's differentiator: fast, keyboard-first, meeting-centric capture. Paperleaf is not a meeting app, but the Mac's job is "capture during work" and these idioms translate._
 
 ### 25.1 Menu bar quick capture
 - **Mac** `implemented` — quick-capture popover (`MacRootView` / `MacToolbar`), saves without opening the full editor.

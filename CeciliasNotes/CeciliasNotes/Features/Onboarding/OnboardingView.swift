@@ -29,7 +29,7 @@ struct OnboardingView: View {
     @State private var validationError: Bool = false
     @State private var isPersonalising: Bool = false
     // `c` is the brand's default letter — matches the bundle's
-    // primary AppIcon (the `c·` mark Cecilia's Notes ships with).
+    // primary AppIcon (the `c·` mark Paperleaf ships with).
     @State private var personalisingLetter: Character = "c"
     @FocusState private var fieldFocused: Bool
 

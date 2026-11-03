@@ -216,7 +216,7 @@ extension ModelContainer {
         let cloudConfig = ModelConfiguration(
             schema: schema,
             url: storeURL,
-            cloudKitDatabase: .private("iCloud.app.ceciliasnotes")
+            cloudKitDatabase: .private("iCloud.com.aadesh.paperleaf")
         )
         do {
             let container = try ModelContainer(
@@ -230,8 +230,8 @@ extension ModelContainer {
             // CKContainer account-status check runs async; logs the
             // user's iCloud sign-in state so we know whether sync
             // even has the prerequisites to fire.
-            dlog("[CloudKit] container initialised on private database (iCloud.app.ceciliasnotes)")
-            CKContainer(identifier: "iCloud.app.ceciliasnotes").accountStatus { status, err in
+            dlog("[CloudKit] container initialised on private database (iCloud.com.aadesh.paperleaf)")
+            CKContainer(identifier: "iCloud.com.aadesh.paperleaf").accountStatus { status, err in
                 let label: String
                 switch status {
                 case .available:           label = "available"
@@ -256,7 +256,7 @@ extension ModelContainer {
             CloudKitContainerState.status = .localOnlyFallback
             #if DEBUG
             dlog("[ModelContainer] CloudKit init failed, falling back to local: \(error)")
-            dlog("[CloudKit] *** SYNC DISABLED *** container ran on local-only path; verify (1) iCloud + CloudKit capabilities in app target, (2) iCloud container 'iCloud.app.ceciliasnotes' exists in Apple Dev portal, (3) user signed into iCloud on device, (4) Cecilia's Notes toggle ON in Settings → Apple ID → iCloud")
+            dlog("[CloudKit] *** SYNC DISABLED *** container ran on local-only path; verify (1) iCloud + CloudKit capabilities in app target, (2) iCloud container 'iCloud.com.aadesh.paperleaf' exists in Apple Dev portal, (3) user signed into iCloud on device, (4) Paperleaf toggle ON in Settings → Apple ID → iCloud")
             #endif
             let localConfig = ModelConfiguration(
                 schema: schema,

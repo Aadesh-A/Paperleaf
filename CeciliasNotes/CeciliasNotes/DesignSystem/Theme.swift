@@ -174,29 +174,29 @@ extension Theme {
 
     static let `default`: Theme = Theme(
         id: "default",
-        displayName: "Default",
+        displayName: "Paper",
         interfaceStyle: .light,
 
         // Foundation — from inkBackground{Primary,Secondary,Elevated} light
-        background:       Color(hex: "#FAFAF8"),
-        surface:          Color(hex: "#F2F2F0"),
-        surfaceElevated:  Color(hex: "#FFFFFF"),
+        background:       Color(hex: "#F7F3EA"),
+        surface:          Color(hex: "#EEE8DB"),
+        surfaceElevated:  Color(hex: "#FFFCF5"),
 
         // Foreground — from inkText{Primary,Secondary,Tertiary} light
-        foreground:        Color(hex: "#1D1D1B"),
-        foregroundMuted:   Color(hex: "#6B6B68"),
-        foregroundSubtle:  Color(hex: "#ADADAA"),
+        foreground:        Color(hex: "#18332A"),
+        foregroundMuted:   Color(hex: "#587066"),
+        foregroundSubtle:  Color(hex: "#8EA097"),
 
         // Recessive — from inkRecessive{Primary..Quinary} light
-        recessivePrimary:    Color(hex: "#555555"),
-        recessiveSecondary:  Color(hex: "#BBBBBB"),
-        recessiveTertiary:   Color(hex: "#CCCCCC"),
-        recessiveQuaternary: Color(hex: "#999999"),
-        recessiveQuinary:    Color(hex: "#DDDDDD"),
+        recessivePrimary:    Color(hex: "#52685F"),
+        recessiveSecondary:  Color(hex: "#9EAAA4"),
+        recessiveTertiary:   Color(hex: "#BBC5BF"),
+        recessiveQuaternary: Color(hex: "#82958B"),
+        recessiveQuinary:    Color(hex: "#D9E0DB"),
 
         // Accent — from inkAccent{Primary,Secondary} light
-        accent:       Color(hex: "#007AFF"),
-        accentMuted:  Color(hex: "#E8F1FF"),
+        accent:       Color(hex: "#2E7D5B"),
+        accentMuted:  Color(hex: "#DDECE4"),
 
         // Borders — alpha overlays on black (light mode)
         separator:       Color.black.opacity(0.06),
@@ -211,13 +211,13 @@ extension Theme {
         danger:   Color(hex: "#FF3B30"),
 
         // Page — from inkCanvasBackground light + architecture-doc starts
-        pageBackground:  Color(hex: "#FFFFFF"),
-        pageLines:       Color(hex: "#E0E0E0"),
-        pageDots:        Color(hex: "#D0D0D0"),
-        pageMargin:      Color(hex: "#F0F0F0"),
+        pageBackground:  Color(hex: "#FFFEFA"),
+        pageLines:       Color(hex: "#D9E5DE"),
+        pageDots:        Color(hex: "#CAD9D1"),
+        pageMargin:      Color(hex: "#F1E8DB"),
 
         // Pen — matches CeciliasNotesTool.Defaults.ceciliasNotesColour(light)
-        defaultInkColor: Color(hex: "#1D1D1B"),
+        defaultInkColor: Color(hex: "#18332A"),
 
         // Assets
         appIconAssetPrefix:        "AppIcon-Default",
@@ -237,8 +237,8 @@ extension Theme {
         ],
 
         // Waveform
-        waveformActive:   Color(hex: "#007AFF"),
-        waveformInactive: Color(hex: "#C0C0C0"),
+        waveformActive:   Color(hex: "#2E7D5B"),
+        waveformInactive: Color(hex: "#AAB8B0"),
 
         // Highlight palette (Step 5.5) — Default theme uses bright
         // hues; renderer applies ~0.4 alpha for the .highlight
@@ -269,14 +269,14 @@ extension Theme {
         // Foundation — from inkBackground{Primary,Secondary,Elevated} dark,
         // with surfaceElevated bumped one tier (Flag #1 decision) to give
         // floating chrome subtle separation from `surface` in dark mode.
-        background:       Color(hex: "#111110"),
-        surface:          Color(hex: "#1C1C1A"),
-        surfaceElevated:  Color(hex: "#2C2C2C"),
+        background:       Color(hex: "#0F1D18"),
+        surface:          Color(hex: "#172A23"),
+        surfaceElevated:  Color(hex: "#21382F"),
 
         // Foreground — from inkText{Primary,Secondary,Tertiary} dark
-        foreground:        Color(hex: "#F5F5F2"),
-        foregroundMuted:   Color(hex: "#8E8E8A"),
-        foregroundSubtle:  Color(hex: "#555552"),
+        foreground:        Color(hex: "#F4F1E8"),
+        foregroundMuted:   Color(hex: "#A7B9AF"),
+        foregroundSubtle:  Color(hex: "#6F897D"),
 
         // Recessive — from inkRecessive{Primary..Quinary} dark.
         // recessiveTertiary bumped #3F3F3D → #5E5E5C in Phase G after
@@ -292,8 +292,8 @@ extension Theme {
         recessiveQuinary:    Color(hex: "#2A2A28"),
 
         // Accent — from inkAccent{Primary,Secondary} dark
-        accent:       Color(hex: "#0A84FF"),
-        accentMuted:  Color(hex: "#0A2545"),
+        accent:       Color(hex: "#62C895"),
+        accentMuted:  Color(hex: "#1F4B38"),
 
         // Borders — alpha overlays on white (dark mode). White at a
         // low alpha over a near-black surface reads much weaker than
@@ -312,10 +312,10 @@ extension Theme {
         danger:   Color(hex: "#FF453A"),
 
         // Page — from inkCanvasBackground dark + architecture-doc starts
-        pageBackground:  Color(hex: "#1A1A1A"),
-        pageLines:       Color(hex: "#2E2E30"),
-        pageDots:        Color(hex: "#3A3A3C"),
-        pageMargin:      Color(hex: "#222224"),
+        pageBackground:  Color(hex: "#15231D"),
+        pageLines:       Color(hex: "#294238"),
+        pageDots:        Color(hex: "#365548"),
+        pageMargin:      Color(hex: "#1B3027"),
 
         // Pen — matches CeciliasNotesTool.Defaults.ceciliasNotesColour(dark)
         defaultInkColor: Color(hex: "#F5F5F2"),

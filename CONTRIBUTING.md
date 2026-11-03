@@ -1,4 +1,4 @@
-# Contributing to Cecilia's Notes
+# Contributing to Paperleaf
 
 Thanks for taking the time to look at the project. The contribution
 process is intentionally a little involved: this is an end-user app
@@ -166,5 +166,5 @@ Be kind, be specific, assume good faith. We follow the
 ## Security issues
 
 Don't open a public issue for a security report — email
-nvg1996@gmail.com directly with the subject "Cecilia's Notes
+nvg1996@gmail.com directly with the subject "Paperleaf
 security" and we'll work it out privately.

@@ -6,7 +6,7 @@ import Foundation
 import UIKit
 #endif
 
-/// Multipeer browser — discovers nearby Cecilia's Notes receivers,
+/// Multipeer browser — discovers nearby Paperleaf receivers,
 /// pairs (manual code or same-Apple-Account auto-pair) and keeps
 /// reconnecting to known peers on the LAN automatically. Runs on
 /// every platform: the Mac browses for iPads, and iPhones/iPads
@@ -207,7 +207,7 @@ final class MultipeerSendService: NSObject, ObservableObject {
         // Pairing invites keep the long window — a human is reading a
         // code off a screen on the other device. Auto-reconnects get a
         // short one: against a ghost peer (record still cached, no app
-        // listening — Mac awake with Cecilia's Notes closed) every
+        // listening — Mac awake with Paperleaf closed) every
         // second of invite window is a second of DTLS handshake
         // retransmits ("No route to host" storm in the device logs).
         // A reachable peer completes the DTLS handshake in ~1 s; only

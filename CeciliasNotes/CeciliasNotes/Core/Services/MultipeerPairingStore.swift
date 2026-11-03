@@ -33,7 +33,7 @@ import Security
 @MainActor
 enum MultipeerPairingStore {
 
-    static let serviceName = "app.ceciliasnotes.multipeer.sharedKey"
+    static let serviceName = "com.aadesh.paperleaf.multipeer.sharedKey"
 
     /// iCloud-Keychain-synced household key — the foundation of
     /// the first-party auto-pairing flow. Every device signed
@@ -45,7 +45,7 @@ enum MultipeerPairingStore {
     /// Lives under a separate service name so the existing
     /// per-peer keys (which MUST stay device-local) can't be
     /// confused with the synced household secret.
-    static let householdServiceName = "app.ceciliasnotes.multipeer.householdKey"
+    static let householdServiceName = "com.aadesh.paperleaf.multipeer.householdKey"
     static let householdAccount = "household"
 
     /// In-memory cache in front of the Keychain. `SecItemCopyMatching`

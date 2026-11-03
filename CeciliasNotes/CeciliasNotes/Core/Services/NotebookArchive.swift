@@ -6,7 +6,7 @@ import SwiftData
 /// carries EVERY V6 element (text with rich formatting, images, audio,
 /// Pencil ink, sticky notes, shapes, highlights, PDF pages) plus the
 /// media bytes, so a notebook can be exported to a file, shared (Drive,
-/// AirDrop, multipeer), and re-opened in Cecilia's Notes on another
+/// AirDrop, multipeer), and re-opened in Paperleaf on another
 /// device as an editable copy.
 ///
 /// One self-contained JSON file (media base64-embedded) so tapping it

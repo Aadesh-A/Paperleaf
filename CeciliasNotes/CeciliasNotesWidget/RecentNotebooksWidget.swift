@@ -1,5 +1,5 @@
 /// RecentNotebooksWidget.swift
-/// Cecilia's Notes
+/// Paperleaf
 ///
 /// Retired during the design-language refresh. The medium-family
 /// recents tile is now `HomeMediumRecentsWidget` in

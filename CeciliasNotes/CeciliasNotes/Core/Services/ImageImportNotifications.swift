@@ -1,5 +1,5 @@
 /// ImageImportNotifications.swift
-/// Cecilia's Notes
+/// Paperleaf
 ///
 /// Shared types + notification names for the image-import flow's
 /// cross-view-model communication. The editor (inside the

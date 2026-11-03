@@ -1,7 +1,7 @@
 import UIKit
 import UniformTypeIdentifiers
 
-/// Cecilia's Notes share-extension entry point. Accepts PDFs, images,
+/// Paperleaf share-extension entry point. Accepts PDFs, images,
 /// plain text, and URLs from any host app and routes them into the
 /// shared app-group `ShareInbox` folder (or `.cnshare` JSON for text).
 /// watches that folder on foreground / launch and ingests anything
@@ -18,12 +18,12 @@ import UniformTypeIdentifiers
 ///   `<app-group-container>/ShareInbox/<uuid>.<ext>`
 final class ShareViewController: UIViewController {
 
-    private static let appGroupID = "group.app.ceciliasnotes"
+    private static let appGroupID = "group.com.aadesh.paperleaf"
     private static let inboxFolderName = "ShareInbox"
 
     private let statusLabel: UILabel = {
         let l = UILabel()
-        l.text = "Cecilia's Notes"
+        l.text = "Paperleaf"
         l.font = .systemFont(ofSize: 13, weight: .medium)
         l.textColor = .secondaryLabel
         l.textAlignment = .center
@@ -158,7 +158,7 @@ final class ShareViewController: UIViewController {
             .flatMap { $0.attachments ?? [] } ?? []
 
         var sawNotebook = false
-        let notebookTypeID = "app.ceciliasnotes.notebook"
+        let notebookTypeID = "com.aadesh.paperleaf.notebook"
 
         for provider in attachments {
             if provider.hasItemConformingToTypeIdentifier(notebookTypeID) {

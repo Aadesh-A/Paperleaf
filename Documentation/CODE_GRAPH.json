@@ -95,11 +95,11 @@
         "Notification.Name"
       ],
       "posts": [
-        "Notification.Name(\"app.ceciliasnotes.mac.newNotebook\"",
+        "Notification.Name(\"com.aadesh.paperleaf.mac.newNotebook\"",
         ".ceciliasNotesCommandNewNotebook",
-        "Notification.Name(\"app.ceciliasnotes.mac.quickCaptureToggle\"",
+        "Notification.Name(\"com.aadesh.paperleaf.mac.quickCaptureToggle\"",
         ".ceciliasNotesQuickCapture",
-        "Notification.Name(\"app.ceciliasnotes.mac.openNotebook\"",
+        "Notification.Name(\"com.aadesh.paperleaf.mac.openNotebook\"",
         ".ceciliasNotesOpenNotebook",
         ".ceciliasNotesOpenAsk"
       ],
@@ -12263,7 +12263,7 @@
       },
       {
         "symbol": "syncConflictLogChanged",
-        "string": "app.ceciliasnotes.sync.conflictsChanged",
+        "string": "com.aadesh.paperleaf.sync.conflictsChanged",
         "declared_in": "CeciliasNotes/CeciliasNotes/Core/Services/SyncConflictLog.swift"
       },
       {
@@ -12333,247 +12333,247 @@
       },
       {
         "symbol": "macOpenHandoffPage",
-        "string": "app.ceciliasnotes.mac.handoff",
+        "string": "com.aadesh.paperleaf.mac.handoff",
         "declared_in": "CeciliasNotes/CeciliasNotesMac/App/MacAppDelegate.swift"
       },
       {
         "symbol": "macIncomingDeepLinkURL",
-        "string": "app.ceciliasnotes.mac.incomingDeepLinkURL",
+        "string": "com.aadesh.paperleaf.mac.incomingDeepLinkURL",
         "declared_in": "CeciliasNotes/CeciliasNotesMac/App/MacAppDelegate.swift"
       },
       {
         "symbol": "macLiveTranscriptUpdated",
-        "string": "app.ceciliasnotes.mac.liveTranscriptUpdated",
+        "string": "com.aadesh.paperleaf.mac.liveTranscriptUpdated",
         "declared_in": "CeciliasNotes/CeciliasNotesMac/Capture/MacDictationFlowCommit.swift"
       },
       {
         "symbol": "macTranscriptionStarted",
-        "string": "app.ceciliasnotes.mac.transcriptionStarted",
+        "string": "com.aadesh.paperleaf.mac.transcriptionStarted",
         "declared_in": "CeciliasNotes/CeciliasNotesMac/Capture/MacDictationFlowCommit.swift"
       },
       {
         "symbol": "macFocusTextBlock",
-        "string": "app.ceciliasnotes.mac.focusTextBlock",
+        "string": "com.aadesh.paperleaf.mac.focusTextBlock",
         "declared_in": "CeciliasNotes/CeciliasNotesMac/Capture/MacDictationFlowCommit.swift"
       },
       {
         "symbol": "macScrollToRecordingPage",
-        "string": "app.ceciliasnotes.mac.scrollToRecordingPage",
+        "string": "com.aadesh.paperleaf.mac.scrollToRecordingPage",
         "declared_in": "CeciliasNotes/CeciliasNotesMac/Capture/MacFloatingRecordingControls.swift"
       },
       {
         "symbol": "macAskAIAboutElement",
-        "string": "app.ceciliasnotes.mac.askAI",
+        "string": "com.aadesh.paperleaf.mac.askAI",
         "declared_in": "CeciliasNotes/CeciliasNotesMac/Editor/DocMode/MacDocBlock.swift"
       },
       {
         "symbol": "macRequestHandoffToIPad",
-        "string": "app.ceciliasnotes.mac.handoffToIPad",
+        "string": "com.aadesh.paperleaf.mac.handoffToIPad",
         "declared_in": "CeciliasNotes/CeciliasNotesMac/Editor/DocMode/MacDocBlock.swift"
       },
       {
         "symbol": "macStartDictation",
-        "string": "app.ceciliasnotes.mac.startDictation",
+        "string": "com.aadesh.paperleaf.mac.startDictation",
         "declared_in": "CeciliasNotes/CeciliasNotesMac/Editor/DocMode/MacDocBlock.swift"
       },
       {
         "symbol": "macCreateNotebook",
-        "string": "app.ceciliasnotes.mac.createNotebook",
+        "string": "com.aadesh.paperleaf.mac.createNotebook",
         "declared_in": "CeciliasNotes/CeciliasNotesMac/MacRootView.swift"
       },
       {
         "symbol": "macShowOnboarding",
-        "string": "app.ceciliasnotes.mac.showOnboarding",
+        "string": "com.aadesh.paperleaf.mac.showOnboarding",
         "declared_in": "CeciliasNotes/CeciliasNotesMac/MacRootView.swift"
       },
       {
         "symbol": "macInsertTextOnPage",
-        "string": "app.ceciliasnotes.mac.insertTextOnPage",
+        "string": "com.aadesh.paperleaf.mac.insertTextOnPage",
         "declared_in": "CeciliasNotes/CeciliasNotesMac/MacRootView.swift"
       },
       {
         "symbol": "macNewNotebook",
-        "string": "app.ceciliasnotes.mac.newNotebook",
+        "string": "com.aadesh.paperleaf.mac.newNotebook",
         "declared_in": "CeciliasNotes/CeciliasNotesMac/MacToolbar.swift"
       },
       {
         "symbol": "macExport",
-        "string": "app.ceciliasnotes.mac.export",
+        "string": "com.aadesh.paperleaf.mac.export",
         "declared_in": "CeciliasNotes/CeciliasNotesMac/MacToolbar.swift"
       },
       {
         "symbol": "macInsertText",
-        "string": "app.ceciliasnotes.mac.insertText",
+        "string": "com.aadesh.paperleaf.mac.insertText",
         "declared_in": "CeciliasNotes/CeciliasNotesMac/MacToolbar.swift"
       },
       {
         "symbol": "macOpenSettings",
-        "string": "app.ceciliasnotes.mac.openSettings",
+        "string": "com.aadesh.paperleaf.mac.openSettings",
         "declared_in": "CeciliasNotes/CeciliasNotesMac/MacToolbar.swift"
       },
       {
         "symbol": "macOpenSearch",
-        "string": "app.ceciliasnotes.mac.openSearch",
+        "string": "com.aadesh.paperleaf.mac.openSearch",
         "declared_in": "CeciliasNotes/CeciliasNotesMac/MacToolbar.swift"
       },
       {
         "symbol": "macToggleSidebar",
-        "string": "app.ceciliasnotes.mac.toggleSidebar",
+        "string": "com.aadesh.paperleaf.mac.toggleSidebar",
         "declared_in": "CeciliasNotes/CeciliasNotesMac/MacToolbar.swift"
       },
       {
         "symbol": "macZoomReset",
-        "string": "app.ceciliasnotes.mac.zoomReset",
+        "string": "com.aadesh.paperleaf.mac.zoomReset",
         "declared_in": "CeciliasNotes/CeciliasNotesMac/MacToolbar.swift"
       },
       {
         "symbol": "macZoomIn",
-        "string": "app.ceciliasnotes.mac.zoomIn",
+        "string": "com.aadesh.paperleaf.mac.zoomIn",
         "declared_in": "CeciliasNotes/CeciliasNotesMac/MacToolbar.swift"
       },
       {
         "symbol": "macZoomOut",
-        "string": "app.ceciliasnotes.mac.zoomOut",
+        "string": "com.aadesh.paperleaf.mac.zoomOut",
         "declared_in": "CeciliasNotes/CeciliasNotesMac/MacToolbar.swift"
       },
       {
         "symbol": "macSummarizePage",
-        "string": "app.ceciliasnotes.mac.summarizePage",
+        "string": "com.aadesh.paperleaf.mac.summarizePage",
         "declared_in": "CeciliasNotes/CeciliasNotesMac/MacToolbar.swift"
       },
       {
         "symbol": "macQuickCaptureToggle",
-        "string": "app.ceciliasnotes.mac.quickCaptureToggle",
+        "string": "com.aadesh.paperleaf.mac.quickCaptureToggle",
         "declared_in": "CeciliasNotes/CeciliasNotesMac/MacToolbar.swift"
       },
       {
         "symbol": "macCaptureHotkeyChanged",
-        "string": "app.ceciliasnotes.mac.captureHotkeyChanged",
+        "string": "com.aadesh.paperleaf.mac.captureHotkeyChanged",
         "declared_in": "CeciliasNotes/CeciliasNotesMac/MacToolbar.swift"
       },
       {
         "symbol": "macOpenCommandPalette",
-        "string": "app.ceciliasnotes.mac.openCommandPalette",
+        "string": "com.aadesh.paperleaf.mac.openCommandPalette",
         "declared_in": "CeciliasNotes/CeciliasNotesMac/MacToolbar.swift"
       },
       {
         "symbol": "macOpenNotebook",
-        "string": "app.ceciliasnotes.mac.openNotebook",
+        "string": "com.aadesh.paperleaf.mac.openNotebook",
         "declared_in": "CeciliasNotes/CeciliasNotesMac/MacToolbar.swift"
       },
       {
         "symbol": "macNewSubject",
-        "string": "app.ceciliasnotes.mac.newSubject",
+        "string": "com.aadesh.paperleaf.mac.newSubject",
         "declared_in": "CeciliasNotes/CeciliasNotesMac/MacToolbar.swift"
       },
       {
         "symbol": "macPrint",
-        "string": "app.ceciliasnotes.mac.print",
+        "string": "com.aadesh.paperleaf.mac.print",
         "declared_in": "CeciliasNotes/CeciliasNotesMac/MacToolbar.swift"
       },
       {
         "symbol": "macAskAboutPage",
-        "string": "app.ceciliasnotes.mac.askAboutPage",
+        "string": "com.aadesh.paperleaf.mac.askAboutPage",
         "declared_in": "CeciliasNotes/CeciliasNotesMac/MacToolbar.swift"
       },
       {
         "symbol": "macPageTemplate",
-        "string": "app.ceciliasnotes.mac.pageTemplate",
+        "string": "com.aadesh.paperleaf.mac.pageTemplate",
         "declared_in": "CeciliasNotes/CeciliasNotesMac/MacToolbar.swift"
       },
       {
         "symbol": "macAddPage",
-        "string": "app.ceciliasnotes.mac.addPage",
+        "string": "com.aadesh.paperleaf.mac.addPage",
         "declared_in": "CeciliasNotes/CeciliasNotesMac/MacToolbar.swift"
       },
       {
         "symbol": "macDeletePage",
-        "string": "app.ceciliasnotes.mac.deletePage",
+        "string": "com.aadesh.paperleaf.mac.deletePage",
         "declared_in": "CeciliasNotes/CeciliasNotesMac/MacToolbar.swift"
       },
       {
         "symbol": "macDuplicatePage",
-        "string": "app.ceciliasnotes.mac.duplicatePage",
+        "string": "com.aadesh.paperleaf.mac.duplicatePage",
         "declared_in": "CeciliasNotes/CeciliasNotesMac/MacToolbar.swift"
       },
       {
         "symbol": "macReorderPages",
-        "string": "app.ceciliasnotes.mac.reorderPages",
+        "string": "com.aadesh.paperleaf.mac.reorderPages",
         "declared_in": "CeciliasNotes/CeciliasNotesMac/MacToolbar.swift"
       },
       {
         "symbol": "macMovePageUp",
-        "string": "app.ceciliasnotes.mac.movePageUp",
+        "string": "com.aadesh.paperleaf.mac.movePageUp",
         "declared_in": "CeciliasNotes/CeciliasNotesMac/MacToolbar.swift"
       },
       {
         "symbol": "macMovePageDown",
-        "string": "app.ceciliasnotes.mac.movePageDown",
+        "string": "com.aadesh.paperleaf.mac.movePageDown",
         "declared_in": "CeciliasNotes/CeciliasNotesMac/MacToolbar.swift"
       },
       {
         "symbol": "macInsertShape",
-        "string": "app.ceciliasnotes.mac.insertShape",
+        "string": "com.aadesh.paperleaf.mac.insertShape",
         "declared_in": "CeciliasNotes/CeciliasNotesMac/MacToolbar.swift"
       },
       {
         "symbol": "macSearchInNotebook",
-        "string": "app.ceciliasnotes.mac.searchInNotebook",
+        "string": "com.aadesh.paperleaf.mac.searchInNotebook",
         "declared_in": "CeciliasNotes/CeciliasNotesMac/MacToolbar.swift"
       },
       {
         "symbol": "macGenerateQuiz",
-        "string": "app.ceciliasnotes.mac.generateQuiz",
+        "string": "com.aadesh.paperleaf.mac.generateQuiz",
         "declared_in": "CeciliasNotes/CeciliasNotesMac/MacToolbar.swift"
       },
       {
         "symbol": "macCopyPage",
-        "string": "app.ceciliasnotes.mac.copyPage",
+        "string": "com.aadesh.paperleaf.mac.copyPage",
         "declared_in": "CeciliasNotes/CeciliasNotesMac/MacToolbar.swift"
       },
       {
         "symbol": "macNewFromTemplate",
-        "string": "app.ceciliasnotes.mac.newFromTemplate",
+        "string": "com.aadesh.paperleaf.mac.newFromTemplate",
         "declared_in": "CeciliasNotes/CeciliasNotesMac/MacToolbar.swift"
       },
       {
         "symbol": "macToggleFocusMode",
-        "string": "app.ceciliasnotes.mac.toggleFocusMode",
+        "string": "com.aadesh.paperleaf.mac.toggleFocusMode",
         "declared_in": "CeciliasNotes/CeciliasNotesMac/MacToolbar.swift"
       },
       {
         "symbol": "macInsertImage",
-        "string": "app.ceciliasnotes.mac.insertImage",
+        "string": "com.aadesh.paperleaf.mac.insertImage",
         "declared_in": "CeciliasNotes/CeciliasNotesMac/MacToolbar.swift"
       },
       {
         "symbol": "macInsertStickyNote",
-        "string": "app.ceciliasnotes.mac.insertStickyNote",
+        "string": "com.aadesh.paperleaf.mac.insertStickyNote",
         "declared_in": "CeciliasNotes/CeciliasNotesMac/MacToolbar.swift"
       },
       {
         "symbol": "macSelectNextElement",
-        "string": "app.ceciliasnotes.mac.selectNextElement",
+        "string": "com.aadesh.paperleaf.mac.selectNextElement",
         "declared_in": "CeciliasNotes/CeciliasNotesMac/MacToolbar.swift"
       },
       {
         "symbol": "macSelectPreviousElement",
-        "string": "app.ceciliasnotes.mac.selectPreviousElement",
+        "string": "com.aadesh.paperleaf.mac.selectPreviousElement",
         "declared_in": "CeciliasNotes/CeciliasNotesMac/MacToolbar.swift"
       },
       {
         "symbol": "macDeleteSelectedElement",
-        "string": "app.ceciliasnotes.mac.deleteSelectedElement",
+        "string": "com.aadesh.paperleaf.mac.deleteSelectedElement",
         "declared_in": "CeciliasNotes/CeciliasNotesMac/MacToolbar.swift"
       },
       {
         "symbol": "macImportPDFPages",
-        "string": "app.ceciliasnotes.mac.importPDFPages",
+        "string": "com.aadesh.paperleaf.mac.importPDFPages",
         "declared_in": "CeciliasNotes/CeciliasNotesMac/MacToolbar.swift"
       },
       {
         "symbol": "macCopyHandwritingOCR",
-        "string": "app.ceciliasnotes.mac.copyHandwritingOCR",
+        "string": "com.aadesh.paperleaf.mac.copyHandwritingOCR",
         "declared_in": "CeciliasNotes/CeciliasNotesMac/MacToolbar.swift"
       }
     ],

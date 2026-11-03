@@ -147,7 +147,7 @@ struct MacSettingsView: View {
             .onChange(of: captureHotkey) { _, _ in
                 NotificationCenter.default.post(name: .macCaptureHotkeyChanged, object: nil)
             }
-            Text("Works system-wide when Cecilia's Notes is running. Menu-bar icon always opens capture.")
+            Text("Works system-wide when Paperleaf is running. Menu-bar icon always opens capture.")
                 .font(.caption)
                 .foregroundStyle(theme.foregroundMuted)
         }

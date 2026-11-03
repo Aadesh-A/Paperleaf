@@ -447,7 +447,7 @@ struct MacRootView: View {
 }
 
 extension Notification.Name {
-    static let macCreateNotebook = Notification.Name("app.ceciliasnotes.mac.createNotebook")
-    static let macShowOnboarding = Notification.Name("app.ceciliasnotes.mac.showOnboarding")
-    static let macInsertTextOnPage = Notification.Name("app.ceciliasnotes.mac.insertTextOnPage")
+    static let macCreateNotebook = Notification.Name("com.aadesh.paperleaf.mac.createNotebook")
+    static let macShowOnboarding = Notification.Name("com.aadesh.paperleaf.mac.showOnboarding")
+    static let macInsertTextOnPage = Notification.Name("com.aadesh.paperleaf.mac.insertTextOnPage")
 }

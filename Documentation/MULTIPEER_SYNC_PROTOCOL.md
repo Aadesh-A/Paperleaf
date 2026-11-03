@@ -1,7 +1,7 @@
 # Multipeer Sync — Wire Protocol (v2.4 — live ink)
 
 Direct device-to-device notebook delivery from a Mac running
-`cecilias-notes-mcp` to an iPad running Cecilia's Notes, bypassing
+`cecilias-notes-mcp` to an iPad running Paperleaf, bypassing
 iCloud's sync latency. Mac and iPad must be on the same Wi-Fi or
 Bluetooth-PAN.
 
@@ -55,7 +55,7 @@ iPad / iPhone / Mac.
 
 **Mechanism.** Each device generates (or fetches) a 32-byte
 random "household key" stored under
-`app.ceciliasnotes.multipeer.householdKey` in **iCloud Keychain**
+`com.aadesh.paperleaf.multipeer.householdKey` in **iCloud Keychain**
 (`kSecAttrSynchronizable = true`, end-to-end encrypted by Apple).
 Every device signed into the same Apple ID converges on the same
 key within a few seconds of first launch.

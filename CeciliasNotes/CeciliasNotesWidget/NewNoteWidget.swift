@@ -1,7 +1,7 @@
 import SwiftUI
 import WidgetKit
 
-// MARK: - Cecilia's Notes — widget set
+// MARK: - Paperleaf — widget set
 //
 // Five widget configurations, all driven by `CeciliasNotesWidgetProvider`'s
 // `NotebookEntry`:
@@ -43,7 +43,7 @@ struct HomeSmallNewNoteWidget: Widget {
             HomeSmallView(entry: entry)
                 .containerBackground(for: .widget) { Color.cnBackground }
         }
-        .configurationDisplayName("Cecilia's Notes — New Note")
+        .configurationDisplayName("Paperleaf — New Note")
         .description("One tap to a fresh notebook.")
         .supportedFamilies([.systemSmall])
     }
@@ -82,7 +82,7 @@ struct HomeMediumRecentsWidget: Widget {
             HomeMediumView(entry: entry)
                 .containerBackground(for: .widget) { Color.cnBackground }
         }
-        .configurationDisplayName("Cecilia's Notes — Recents")
+        .configurationDisplayName("Paperleaf — Recents")
         .description("Quick capture plus your three most recent notebooks.")
         .supportedFamilies([.systemMedium])
     }
@@ -169,7 +169,7 @@ struct LockCircularNewNoteWidget: Widget {
             LockCircularView()
                 .containerBackground(.fill.tertiary, for: .widget)
         }
-        .configurationDisplayName("Cecilia's Notes — New Note")
+        .configurationDisplayName("Paperleaf — New Note")
         .description("One-tap fresh notebook from the lock screen.")
         .supportedFamilies([.accessoryCircular])
     }
@@ -177,11 +177,11 @@ struct LockCircularNewNoteWidget: Widget {
 
 private struct LockCircularView: View {
 
-    @AppStorage("user.displayName", store: UserDefaults(suiteName: "group.app.ceciliasnotes"))
+    @AppStorage("user.displayName", store: UserDefaults(suiteName: "group.com.aadesh.paperleaf"))
     private var sharedName: String = ""
 
     /// First-letter of the user's name, lowercased, ASCII-only.
-    /// Falls back to "c" (Cecilia's Notes brand default).
+    /// Falls back to "c" (Paperleaf brand default).
     private var initial: String {
         let trimmed = sharedName.trimmingCharacters(in: .whitespacesAndNewlines)
         let first = trimmed.lowercased().first.map(String.init) ?? "c"
@@ -214,7 +214,7 @@ struct LockRectangularLastNotebookWidget: Widget {
             LockRectangularView(entry: entry)
                 .containerBackground(.fill.tertiary, for: .widget)
         }
-        .configurationDisplayName("Cecilia's Notes — Last Notebook")
+        .configurationDisplayName("Paperleaf — Last Notebook")
         .description("New note plus your most recent notebook on the lock screen.")
         .supportedFamilies([.accessoryRectangular])
     }
@@ -251,7 +251,7 @@ struct LockInlineRecentWidget: Widget {
         StaticConfiguration(kind: kind, provider: CeciliasNotesWidgetProvider()) { entry in
             LockInlineView(entry: entry)
         }
-        .configurationDisplayName("Cecilia's Notes — Recent Notebook")
+        .configurationDisplayName("Paperleaf — Recent Notebook")
         .description("Tap to open your most recent notebook.")
         .supportedFamilies([.accessoryInline])
     }
@@ -286,7 +286,7 @@ private struct LockInlineView: View {
 private struct BrandPossessive: View {
     let size: CGFloat
 
-    @AppStorage("user.displayName", store: UserDefaults(suiteName: "group.app.ceciliasnotes"))
+    @AppStorage("user.displayName", store: UserDefaults(suiteName: "group.com.aadesh.paperleaf"))
     private var sharedName: String = ""
 
     private var displayName: String {
@@ -336,7 +336,7 @@ private struct BrandPossessive: View {
 /// behind the brand mark and bleeds off the bottom-right edge.
 private struct GhostLetter: View {
 
-    @AppStorage("user.displayName", store: UserDefaults(suiteName: "group.app.ceciliasnotes"))
+    @AppStorage("user.displayName", store: UserDefaults(suiteName: "group.com.aadesh.paperleaf"))
     private var sharedName: String = ""
 
     private var letter: String {
@@ -356,7 +356,7 @@ private struct GhostLetter: View {
     }
 }
 
-// MARK: - Palette (Cecilia's Notes)
+// MARK: - Palette (Paperleaf)
 
 private extension Color {
     /// Near-black on light, near-white on dark.

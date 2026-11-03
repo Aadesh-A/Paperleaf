@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Lightweight Code Property Graph builder for the Cecilia's Notes Swift codebase.
+Lightweight Code Property Graph builder for the Paperleaf Swift codebase.
 
 Produces two artifacts consumed by humans and by LLM assistants opening the
 project cold:

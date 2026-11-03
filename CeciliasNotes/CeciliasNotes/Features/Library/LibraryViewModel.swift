@@ -164,6 +164,7 @@ final class LibraryViewModel: ObservableObject {
     /// macOS sidebar smart list filter (Today / This week / …).
     @Published var macSmartList: MacSmartList?
     @Published var searchText: String = ""
+    @Published private(set) var recentSearches: [String] = SearchHistoryStore.recent()
     @Published var sortOrder: NotebookSortOrder = .lastModified
     @Published var isSelecting: Bool = false
     @Published var selectedNotebookIds: Set<UUID> = []
@@ -288,6 +289,25 @@ final class LibraryViewModel: ObservableObject {
         guard !activeTagFilters.isEmpty else { return }
         activeTagFilters.removeAll()
         refresh()
+    }
+
+    /// Commits a deliberate search (Return/Search key) to the local history.
+    /// Debounced live-search remains unchanged; only intentional submissions
+    /// become suggestions, so half-typed fragments never pollute the list.
+    func commitSearch() {
+        recentSearches = SearchHistoryStore.record(searchText)
+        performSearch(searchText)
+    }
+
+    func useRecentSearch(_ query: String) {
+        searchText = query
+        recentSearches = SearchHistoryStore.record(query)
+        performSearch(query)
+    }
+
+    func clearRecentSearches() {
+        SearchHistoryStore.clear()
+        recentSearches = []
     }
     /// Set when the user taps a page-scoped search result. Read by
     /// the editor's onAppear and translated into a `pendingScrollPageIndex`
@@ -1521,7 +1541,7 @@ final class LibraryViewModel: ObservableObject {
     /// Full-fidelity `.ceciliabook` export (all elements: text, ink,
     /// images, audio, shapes, stickies, highlights). When set, the
     /// Library presents a share sheet; the file opens back in
-    /// Cecilia's Notes on any device that taps it.
+    /// Paperleaf on any device that taps it.
     @Published var shareArchiveURL: URL?
 
     func shareNotebookArchive(_ notebook: Notebook) {

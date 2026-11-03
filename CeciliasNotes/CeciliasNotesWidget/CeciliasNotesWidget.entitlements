@@ -8,7 +8,7 @@
 <dict>
     <key>com.apple.security.application-groups</key>
     <array>
-        <string>group.app.ceciliasnotes</string>
+        <string>group.com.aadesh.paperleaf</string>
     </array>
 </dict>
 </plist>

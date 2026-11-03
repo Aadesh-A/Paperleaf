@@ -15,7 +15,7 @@ enum SyncConflictLog {
         let resolution: String
     }
 
-    private static let key = "app.ceciliasnotes.sync.conflicts"
+    private static let key = "com.aadesh.paperleaf.sync.conflicts"
     private static let maxRecords = 30
 
     static var records: [Record] {
@@ -57,5 +57,5 @@ enum SyncConflictLog {
 }
 
 extension Notification.Name {
-    static let syncConflictLogChanged = Notification.Name("app.ceciliasnotes.sync.conflictsChanged")
+    static let syncConflictLogChanged = Notification.Name("com.aadesh.paperleaf.sync.conflictsChanged")
 }

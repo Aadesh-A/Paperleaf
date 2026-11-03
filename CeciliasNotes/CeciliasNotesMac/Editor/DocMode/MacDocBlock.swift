@@ -694,9 +694,9 @@ private struct MacDocStickyEditor: View {
 }
 
 extension Notification.Name {
-    static let macAskAIAboutElement = Notification.Name("app.ceciliasnotes.mac.askAI")
-    static let macRequestHandoffToIPad = Notification.Name("app.ceciliasnotes.mac.handoffToIPad")
-    static let macStartDictation = Notification.Name("app.ceciliasnotes.mac.startDictation")
+    static let macAskAIAboutElement = Notification.Name("com.aadesh.paperleaf.mac.askAI")
+    static let macRequestHandoffToIPad = Notification.Name("com.aadesh.paperleaf.mac.handoffToIPad")
+    static let macStartDictation = Notification.Name("com.aadesh.paperleaf.mac.startDictation")
 }
 
 private struct MacDocPDFBlock: View {

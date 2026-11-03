@@ -1,5 +1,5 @@
 /// MediaPickerPresenter.swift
-/// Cecilia's Notes
+/// Paperleaf
 ///
 /// UIKit-direct presentation of `PHPickerViewController` for the
 /// toolbar's "+ Image" action. Bypasses SwiftUI's presentation

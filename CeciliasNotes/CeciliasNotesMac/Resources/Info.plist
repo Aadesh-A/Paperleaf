@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>Cecilia's Notes</string>
+	<string>Paperleaf</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIconFile</key>
@@ -28,14 +28,14 @@
 	<array>
 		<dict>
 			<key>CFBundleTypeName</key>
-			<string>Cecilia's Notes Notebook</string>
+			<string>Paperleaf Notebook</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSHandlerRank</key>
 			<string>Owner</string>
 			<key>LSItemContentTypes</key>
 			<array>
-				<string>app.ceciliasnotes.notebook</string>
+				<string>com.aadesh.paperleaf.notebook</string>
 			</array>
 		</dict>
 	</array>
@@ -43,9 +43,9 @@
 	<array>
 		<dict>
 			<key>UTTypeIdentifier</key>
-			<string>app.ceciliasnotes.notebook</string>
+			<string>com.aadesh.paperleaf.notebook</string>
 			<key>UTTypeDescription</key>
-			<string>Cecilia's Notes Notebook</string>
+			<string>Paperleaf Notebook</string>
 			<key>UTTypeConformsTo</key>
 			<array>
 				<string>public.data</string>
@@ -73,7 +73,7 @@
 	  discovery on the same identifier.
 	-->
 	<key>NSLocalNetworkUsageDescription</key>
-	<string>Cecilia's Notes uses the local network to sync notebooks with your nearby iPhone, iPad, or Mac — no cloud round-trip needed.</string>
+	<string>Paperleaf uses the local network to sync notebooks with your nearby iPhone, iPad, or Mac — no cloud round-trip needed.</string>
 	<key>NSBonjourServices</key>
 	<array>
 		<string>_cn-sync._tcp</string>
@@ -85,7 +85,7 @@
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLName</key>
-			<string>app.ceciliasnotes</string>
+			<string>com.aadesh.paperleaf</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>ceciliasnotes</string>
@@ -94,19 +94,19 @@
 	</array>
 	<key>NSUserActivityTypes</key>
 	<array>
-		<string>app.ceciliasnotes.page</string>
+		<string>com.aadesh.paperleaf.page</string>
 	</array>
 	<key>NSMicrophoneUsageDescription</key>
-	<string>Cecilia's Notes uses the microphone for lecture recording and voice notes.</string>
+	<string>Paperleaf uses the microphone for lecture recording and voice notes.</string>
 	<key>NSSpeechRecognitionUsageDescription</key>
-	<string>Cecilia's Notes transcribes your recordings on device for lecture mode and dictation.</string>
+	<string>Paperleaf transcribes your recordings on device for lecture mode and dictation.</string>
 	<key>NSServices</key>
 	<array>
 		<dict>
 			<key>NSMenuItem</key>
 			<dict>
 				<key>default</key>
-				<string>New Note from Selection in Cecilia's Notes</string>
+				<string>New Note from Selection in Paperleaf</string>
 			</dict>
 			<key>NSMessage</key>
 			<string>newNoteFromSelection</string>

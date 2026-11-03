@@ -232,10 +232,10 @@ flows:
     domain: library_notebooks
     name: Pin / favourite notebook (top of grid)
     devices:
-      ipad: { status: missing }
-      iphone: { status: missing }
-      mac: { status: missing }
-    priority: p2
+      ipad: { status: implemented, ux: "Pin from card menu; starred favourites rail stays at the top of the grid." }
+      iphone: { status: implemented }
+      mac: { status: implemented }
+    files: [Features/Library/Grid/NotebookCardView.swift, Features/Library/Grid/NotebookGridView.swift]
 
   - id: library_notebooks.quick_look
     domain: library_notebooks
@@ -392,8 +392,8 @@ flows:
   - id: library_search.suggestions
     domain: library_search
     name: Search suggestions / recents
-    devices: { ipad: { status: missing }, iphone: { status: missing }, mac: { status: missing } }
-    priority: p2
+    devices: { ipad: { status: implemented }, iphone: { status: implemented }, mac: { status: implemented } }
+    files: [Features/Library/Search/SearchHistoryStore.swift, Features/Library/Grid/NotebookGridView.swift]
 
   # ---------- 8. Ask My Notes ----------
   - id: library_ask.open
@@ -1129,7 +1129,7 @@ flows:
     domain: system_integrations
     name: Share extension (receive text/URL from other apps)
     devices:
-      ipad: { status: implemented, ux: "Share → Cecilia's Notes — PDF/image/text/URL via ShareInbox." }
+      ipad: { status: implemented, ux: "Share → Paperleaf — PDF/image/text/URL via ShareInbox." }
       iphone: { status: implemented }
       mac: { status: n_a, reason: "macOS uses Services menu instead." }
     files: [CeciliasNotesShareExtension/ShareViewController.swift, Core/Services/ShareInboxWatcher.swift, Core/Services/QuickCaptureSave.swift]

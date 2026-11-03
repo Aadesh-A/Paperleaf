@@ -476,7 +476,7 @@ struct MacEditorView: View {
         activity.becomeCurrent()
         let alert = NSAlert()
         alert.messageText = "Continue on iPad"
-        alert.informativeText = "Open Cecilia's Notes on your nearby iPad to edit this page with Apple Pencil."
+        alert.informativeText = "Open Paperleaf on your nearby iPad to edit this page with Apple Pencil."
         alert.alertStyle = .informational
         alert.addButton(withTitle: "OK")
         alert.runModal()

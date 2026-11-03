@@ -24,7 +24,7 @@ struct MacExportResult: Sendable, Equatable {
     var formatLabel: String { format.label }
 
     static var exportsFolderLabel: String {
-        "Cecilia's Notes → Exports"
+        "Paperleaf → Exports"
     }
 
     var friendlyPath: String {

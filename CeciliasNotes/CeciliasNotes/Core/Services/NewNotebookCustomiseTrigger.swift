@@ -1,5 +1,5 @@
 /// NewNotebookCustomiseTrigger.swift
-/// Cecilia's Notes
+/// Paperleaf
 ///
 /// Process-local one-shot registry for the "newly-created notebook
 /// should auto-open the customise panel" hand-off. The library

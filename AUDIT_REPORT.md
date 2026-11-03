@@ -1,4 +1,4 @@
-# Cecilia's Notes — Audit Report
+# Paperleaf — Audit Report
 
 **Date:** 2026-05-07
 **Auditor:** Claude Code

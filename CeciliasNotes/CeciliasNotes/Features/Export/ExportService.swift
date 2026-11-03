@@ -554,7 +554,7 @@ final class ExportService {
         let info = UIGraphicsPDFRendererFormat()
         var docInfo: [String: Any] = [
             kCGPDFContextTitle  as String: notebook.title,
-            kCGPDFContextAuthor as String: "Cecilia's Notes",
+            kCGPDFContextAuthor as String: "Paperleaf",
         ]
         if !notebook.tags.isEmpty {
             docInfo[kCGPDFContextKeywords as String] = notebook.tags.joined(separator: ", ")
@@ -1303,12 +1303,12 @@ final class ExportService {
             withAttributes: dateAttrs
         )
 
-        // "Cecilia's Notes" wordmark — bottom-right, .ceciliasNotesCaption (12pt)
+        // "Paperleaf" wordmark — bottom-right, .ceciliasNotesCaption (12pt)
         let markAttrs: [NSAttributedString.Key: Any] = [
             .font:            UIFont.ceciliasNotesCaption,
             .foregroundColor: UIColor.white.withAlphaComponent(0.40),
         ]
-        let markStr  = "Cecilia's Notes" as NSString
+        let markStr  = "Paperleaf" as NSString
         let markSize = markStr.size(withAttributes: markAttrs)
         markStr.draw(
             at: CGPoint(x: bounds.maxX - markSize.width - 16, y: bounds.maxY - markSize.height - 16),

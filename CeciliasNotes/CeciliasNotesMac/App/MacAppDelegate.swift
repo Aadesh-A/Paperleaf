@@ -117,7 +117,7 @@ extension MacAppDelegate {
 }
 
 extension Notification.Name {
-    static let macOpenHandoffPage = Notification.Name("app.ceciliasnotes.mac.handoff")
+    static let macOpenHandoffPage = Notification.Name("com.aadesh.paperleaf.mac.handoff")
     /// Widget / external `ceciliasnotes://` opens delivered via `NSApplicationDelegate`.
-    static let macIncomingDeepLinkURL = Notification.Name("app.ceciliasnotes.mac.incomingDeepLinkURL")
+    static let macIncomingDeepLinkURL = Notification.Name("com.aadesh.paperleaf.mac.incomingDeepLinkURL")
 }

@@ -7,7 +7,7 @@ matter-of-fact descriptions, no marketing-speak superlatives
 
 ## App Name (limit 30 chars)
 ```
-Cecilia's Notes
+Paperleaf
 ```
 *14 / 30*
 
@@ -40,7 +40,7 @@ Write with Apple Pencil, type, or let AI agents help you. Organise by subject. I
 
 ## Description (limit 4000 chars)
 ```
-Cecilia's Notes is an editorial-feeling notebook app for iPhone, iPad, and Mac. Write with Apple Pencil on iPad, type with the keyboard everywhere, drop in a PDF or a photo, record dictation. Organise notebooks by subject, jump between them from a single library home.
+Paperleaf is an editorial-feeling notebook app for iPhone, iPad, and Mac. Write with Apple Pencil on iPad, type with the keyboard everywhere, drop in a PDF or a photo, record dictation. Organise notebooks by subject, jump between them from a single library home.
 
 Write & Draw
   • Apple Pencil with palm rejection, full PencilKit stack
@@ -96,7 +96,7 @@ Made for iPhone, iPad, and Mac
 
 ### Mac companion description (App Store Connect → macOS)
 ```
-Cecilia's Notes for Mac is the desktop companion to your iPhone and iPad notebooks. Read handwriting from iPad, edit typed text, images, PDFs, stickies, and audio. Search, quiz, export, and ask your notes — all synced through the same iCloud library.
+Paperleaf for Mac is the desktop companion to your iPhone and iPad notebooks. Read handwriting from iPad, edit typed text, images, PDFs, stickies, and audio. Search, quiz, export, and ask your notes — all synced through the same iCloud library.
 
   • Universal Purchase — one subscription unlocks iPad, iPhone, and Mac
   • Read iPad handwriting; edit everything else on Mac

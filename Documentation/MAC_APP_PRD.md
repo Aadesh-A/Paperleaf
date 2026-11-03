@@ -1,6 +1,6 @@
-# Cecilia's Notes for Mac — Product Requirements Document
+# Paperleaf for Mac — Product Requirements Document
 
-A reference for building the native Mac companion to Cecilia's Notes.
+A reference for building the native Mac companion to Paperleaf.
 Written to be self-sufficient: an implementer (human or LLM) should
 be able to ship the v1 app from this document plus the existing
 codebase without further clarifying calls. Bullet points and short
@@ -19,7 +19,7 @@ Companion documents:
 
 ## 1. Vision
 
-- **Goal.** Cecilia's Notes should be reachable from every screen
+- **Goal.** Paperleaf should be reachable from every screen
   its owner uses — the iPad they write on, the iPhone they carry,
   and the Mac they work on. The Mac app is the third and final
   device in that set for v1.
@@ -28,7 +28,7 @@ Companion documents:
   library. It optimises for reading, searching, organising,
   exporting, and typing; handwriting and drawing remain iPad-first.
 - **Non-goal.** We do not pursue web, Windows, or Android in this
-  document. Cecilia's Notes stays a first-party Apple product.
+  document. Paperleaf stays a first-party Apple product.
 - **Success criteria (measured at 90 days post-launch).**
   - A user with an active iPad notebook can open the same notebook
     on their Mac within 60 seconds of first launch, with zero
@@ -88,12 +88,12 @@ Companion documents:
 - **Architecture.** Apple silicon + Intel universal binary. Intel
   build supported through v1; may be dropped at v2.
 - **Distribution.** Mac App Store, **Universal Purchase** with the
-  existing iOS app (`app.ceciliasnotes`) — a user who bought the
+  existing iOS app (`com.aadesh.paperleaf`) — a user who bought the
   iPad app gets Mac free. Bundle ID stays the same across
   platforms; Xcode uses the destination to differentiate.
 - **Signing / sandbox.** App Sandbox on. Hardened runtime on.
   Entitlements limited to: iCloud (CloudKit + key-value store +
-  ubiquity container), App Groups (`group.app.ceciliasnotes`),
+  ubiquity container), App Groups (`group.com.aadesh.paperleaf`),
   Camera (off — deferred), Microphone (off — deferred),
   User-Selected Files (read/write, for import/export via Finder),
   Downloads Folder (read/write, for default export destination).
@@ -258,7 +258,7 @@ CeciliasNotes.xcodeproj
 ### 5.4 Data flow and sync
 
 - **Same CloudKit container** as iPad
-  (`iCloud.app.ceciliasnotes`). SwiftData's CloudKit backing sees
+  (`iCloud.com.aadesh.paperleaf`). SwiftData's CloudKit backing sees
   Mac and iPad as two devices of the same account, and syncs the
   private database in the background.
 - **First-launch bootstrap.** On sign-in, the Mac subscribes to
@@ -415,7 +415,7 @@ CeciliasNotes.xcodeproj
 
 Top-level menus, in order:
 
-- **Cecilia's Notes** — About, Settings…, Services, Hide, Quit.
+- **Paperleaf** — About, Settings…, Services, Hide, Quit.
 - **File** — New Notebook `⌘N`, New Window `⌘⌥N`, Open…
   `⌘O`, Import PDF…, Import Image…, Close Window `⌘W`, Save
   Snapshot… `⌘S`, Export… `⌘E`, Share… `⌘⇧S`, Print… `⌘P`.
@@ -431,7 +431,7 @@ Top-level menus, in order:
   Archive, Move to Trash `⌫`.
 - **Quiz** — Take Quiz…, Show Results.
 - **Window** — Standard.
-- **Help** — Cecilia's Notes Help, Contact Support, Release
+- **Help** — Paperleaf Help, Contact Support, Release
   Notes.
 
 ### 6.7 Keyboard shortcuts (canonical list)
@@ -473,7 +473,7 @@ set above.
 
 - **First launch.** A single-window sheet (no separate onboarding
   window):
-  1. Welcome — "Cecilia's Notes syncs with your iPad through
+  1. Welcome — "Paperleaf syncs with your iPad through
      iCloud. Sign in to iCloud to get started."
   2. iCloud check — if signed in, one-line confirmation and a
      "Continue" button. If not, deep link to System Settings.
@@ -552,7 +552,7 @@ set above.
   visible page.
 - **Payload.**
   ```
-  activityType: "app.ceciliasnotes.page"
+  activityType: "com.aadesh.paperleaf.page"
   userInfo:
     notebookId: UUID
     pageId: UUID

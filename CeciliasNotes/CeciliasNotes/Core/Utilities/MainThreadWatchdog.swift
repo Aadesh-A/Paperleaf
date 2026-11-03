@@ -46,7 +46,7 @@ enum MainThreadWatchdog {
     // default-MainActor mode otherwise infers isolation these
     // dispatch closures can never honour.
     private nonisolated final class _Engine: @unchecked Sendable {
-        private let queue = DispatchQueue(label: "app.ceciliasnotes.main-thread-watchdog")
+        private let queue = DispatchQueue(label: "com.aadesh.paperleaf.main-thread-watchdog")
         private var isInstalled = false
         private var pendingPingID = 0
         private var lastAckID = 0

@@ -136,5 +136,5 @@ struct MacFloatingRecordingControls: View {
 }
 
 extension Notification.Name {
-    static let macScrollToRecordingPage = Notification.Name("app.ceciliasnotes.mac.scrollToRecordingPage")
+    static let macScrollToRecordingPage = Notification.Name("com.aadesh.paperleaf.mac.scrollToRecordingPage")
 }

@@ -65,14 +65,14 @@ struct NotebookEntityQuery: EntityQuery {
 /// App Intents / Shortcuts — Universal Purchase bundle enables both targets.
 struct CreateNotebookIntent: AppIntent {
     static var title: LocalizedStringResource { "Create New Notebook" }
-    static var description: IntentDescription { "Creates a new notebook in Cecilia's Notes." }
+    static var description: IntentDescription { "Creates a new notebook in Paperleaf." }
     static let openAppWhenRun: Bool = true
 
     func perform() async throws -> some IntentResult {
         await MainActor.run {
 #if os(macOS)
             NotificationCenter.default.post(
-                name: Notification.Name("app.ceciliasnotes.mac.newNotebook"),
+                name: Notification.Name("com.aadesh.paperleaf.mac.newNotebook"),
                 object: nil
             )
 #else
@@ -85,7 +85,7 @@ struct CreateNotebookIntent: AppIntent {
 
 struct OpenNotebookIntent: AppIntent {
     static var title: LocalizedStringResource { "Open Notebook" }
-    static var description: IntentDescription { "Opens a notebook in Cecilia's Notes." }
+    static var description: IntentDescription { "Opens a notebook in Paperleaf." }
     static let openAppWhenRun: Bool = true
 
     @Parameter(title: "Notebook")
@@ -107,7 +107,7 @@ struct OpenQuickCaptureIntent: AppIntent {
         await MainActor.run {
 #if os(macOS)
             NotificationCenter.default.post(
-                name: Notification.Name("app.ceciliasnotes.mac.quickCaptureToggle"),
+                name: Notification.Name("com.aadesh.paperleaf.mac.quickCaptureToggle"),
                 object: nil
             )
 #else
@@ -187,7 +187,7 @@ enum CeciliasNotesIntentRouting {
     static func openNotebook(id: UUID) {
 #if os(macOS)
         NotificationCenter.default.post(
-            name: Notification.Name("app.ceciliasnotes.mac.openNotebook"),
+            name: Notification.Name("com.aadesh.paperleaf.mac.openNotebook"),
             object: nil,
             userInfo: [CeciliasNotesIntentKeys.notebookId: id]
         )

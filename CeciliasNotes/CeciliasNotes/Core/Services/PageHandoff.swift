@@ -6,7 +6,7 @@ import Foundation
 /// `NSUserActivityTypes` Info.plist entry.
 enum PageHandoff {
 
-    static let activityType = "app.ceciliasnotes.page"
+    static let activityType = "com.aadesh.paperleaf.page"
     static let notebookIdKey = "notebookId"
     static let pageIdKey = "pageId"
     static let scrollOffsetKey = "scrollOffset"

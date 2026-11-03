@@ -224,7 +224,7 @@ exercise them. Mark a TestFlight pass against each before App Store.
 - [ ] `PrivacyInfo.xcprivacy` declares the required-reason APIs
       (UserDefaults, file timestamps, CloudKit).
 - [ ] No `NSUserTrackingUsageDescription` key (app doesn't track).
-- [ ] iCloud entitlement for `iCloud.app.ceciliasnotes` verified in
+- [ ] iCloud entitlement for `iCloud.com.aadesh.paperleaf` verified in
       App Store Connect.
 
 ### App Store metadata

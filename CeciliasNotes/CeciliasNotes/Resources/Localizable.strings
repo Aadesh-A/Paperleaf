@@ -1,7 +1,7 @@
-/* Cecilia's Notes — Localizable Strings */
+/* Paperleaf — Localizable Strings */
 
 /* General */
-"app.name" = "Cecilia's Notes";
+"app.name" = "Paperleaf";
 
 /* Library */
 "library.title" = "Library";

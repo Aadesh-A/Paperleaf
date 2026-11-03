@@ -132,7 +132,7 @@ final class IntelligenceService {
     /// the same key the widget reads. AI prompts that surface user-
     /// facing copy should personalise with this when available.
     var userDisplayName: String {
-        UserDefaults(suiteName: "group.app.ceciliasnotes")?
+        UserDefaults(suiteName: "group.com.aadesh.paperleaf")?
             .string(forKey: "user.displayName") ?? ""
     }
 

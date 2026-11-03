@@ -84,7 +84,7 @@ final class PDFPageElementSmokeTests: XCTestCase {
     }
 
     func test_mediaStorage_sha256Hex_isDeterministic() {
-        let data = "Cecilia's Notes".data(using: .utf8)!
+        let data = "Paperleaf".data(using: .utf8)!
         let a = MediaStorage.sha256Hex(of: data)
         let b = MediaStorage.sha256Hex(of: data)
         XCTAssertEqual(a, b)

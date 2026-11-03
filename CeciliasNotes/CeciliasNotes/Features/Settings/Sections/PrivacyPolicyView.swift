@@ -37,7 +37,7 @@ struct PrivacyPolicyView: View {
     private var shortVersion: some View {
         VStack(alignment: .leading, spacing: 14) {
             sectionLabel("the short version")
-            Text("Cecilia's Notes does not collect, store, transmit, or share any personal data. Your notes stay on your device. We have no server. We have no account system. We cannot see your notes because they never leave your iPad.")
+            Text("Paperleaf does not collect, store, transmit, or share any personal data. Your notes stay on your device. We have no server. We have no account system. We cannot see your notes because they never leave your iPad.")
                 .font(.system(size: 14))
                 .foregroundStyle(theme.foreground)
                 .lineSpacing(4)

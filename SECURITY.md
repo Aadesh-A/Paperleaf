@@ -8,7 +8,7 @@ exploit window opens before a fix can ship.
 
 Instead, email **nvg1996@gmail.com** with the subject line:
 
-> Cecilia's Notes security
+> Paperleaf security
 
 Include in the body:
 
@@ -26,7 +26,7 @@ the release notes when the fix ships.
 
 In scope for this policy:
 
-- The Cecilia's Notes iPad app source code in this repository.
+- The Paperleaf iPad app source code in this repository.
 - The `.inkbook` v1 file format and the MCP mirror contract
   (importer / exporter / parser code paths).
 

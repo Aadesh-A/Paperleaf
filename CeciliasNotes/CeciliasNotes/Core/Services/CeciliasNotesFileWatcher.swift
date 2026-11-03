@@ -6,10 +6,10 @@ import SwiftData
 /// each new/changed file to `CeciliasNotesImporter`.
 ///
 /// **Where it watches.** The app has a private iCloud container
-/// (`iCloud.app.ceciliasnotes`, see `CeciliasNotes.entitlements`).
+/// (`iCloud.com.aadesh.paperleaf`, see `CeciliasNotes.entitlements`).
 /// External writers drop files into
 /// `<ubiquity-container>/Documents/Inbox/`, which the user sees as a
-/// folder under Files.app › iCloud Drive › Cecilia's Notes once the
+/// folder under Files.app › iCloud Drive › Paperleaf once the
 /// `NSUbiquitousContainerIsDocumentScopePublic` Info.plist key is
 /// set. We deliberately stay inside the app's own container rather
 /// than poking at general `com~apple~CloudDocs` — iOS does not let an
@@ -69,7 +69,7 @@ final class CeciliasNotesFileWatcher {
 
     /// Container identifier from the .entitlements file. Must match
     /// `com.apple.developer.ubiquity-container-identifiers` exactly.
-    private static let containerIdentifier = "iCloud.app.ceciliasnotes"
+    private static let containerIdentifier = "iCloud.com.aadesh.paperleaf"
 
     private init() {}
 

@@ -22,7 +22,7 @@ enum MediaSyncBackfill {
 
     private static let runOnceKey = "ceciliasnotes.mediaSyncBackfill.v1.done"
     private static let logger = Logger(
-        subsystem: "app.ceciliasnotes",
+        subsystem: "com.aadesh.paperleaf",
         category: "MediaSyncBackfill"
     )
 

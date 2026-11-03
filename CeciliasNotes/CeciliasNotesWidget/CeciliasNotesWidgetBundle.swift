@@ -3,7 +3,7 @@
 //  CeciliasNotesWidget
 //
 //  Registers every widget the extension ships. The set was rebuilt
-//  during the Cecilia's Notes design-language refresh — the legacy
+//  during the Paperleaf design-language refresh — the legacy
 //  `CeciliasNotesWidget` and `QuickCaptureWidget` configurations are gone; see
 //  `NewNoteWidget.swift` for the canonical five.
 //

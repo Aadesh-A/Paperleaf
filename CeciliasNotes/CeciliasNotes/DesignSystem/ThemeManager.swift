@@ -33,7 +33,7 @@ public final class ThemeManager: ObservableObject {
     private let defaults: UserDefaults
     private static let currentIdKey = "theme.currentId"
     private static let legacyKey    = "ceciliasnotes.theme"
-    private static let appGroupSuite = "group.app.ceciliasnotes"
+    private static let appGroupSuite = "group.com.aadesh.paperleaf"
 
     // MARK: Init
 

@@ -1,5 +1,5 @@
 /// ImagePickerBridge.swift
-/// Cecilia's Notes
+/// Paperleaf
 ///
 /// Retired. Picker presentation is now driven by
 /// `LibraryViewModel.pendingImageImport` (root-level state) with

@@ -174,7 +174,7 @@ enum MacTranscriptionKeys {
 }
 
 extension Notification.Name {
-    static let macLiveTranscriptUpdated = Notification.Name("app.ceciliasnotes.mac.liveTranscriptUpdated")
-    static let macTranscriptionStarted = Notification.Name("app.ceciliasnotes.mac.transcriptionStarted")
-    static let macFocusTextBlock = Notification.Name("app.ceciliasnotes.mac.focusTextBlock")
+    static let macLiveTranscriptUpdated = Notification.Name("com.aadesh.paperleaf.mac.liveTranscriptUpdated")
+    static let macTranscriptionStarted = Notification.Name("com.aadesh.paperleaf.mac.transcriptionStarted")
+    static let macFocusTextBlock = Notification.Name("com.aadesh.paperleaf.mac.focusTextBlock")
 }

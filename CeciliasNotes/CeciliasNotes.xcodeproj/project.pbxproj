@@ -847,7 +847,7 @@
 				CODE_SIGN_ENTITLEMENTS = CeciliasNotesShareExtension/CeciliasNotesShareExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 3;
-				DEVELOPMENT_TEAM = W9559HJWN9;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = CeciliasNotesShareExtension/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
@@ -857,7 +857,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 3.0;
-				PRODUCT_BUNDLE_IDENTIFIER = app.ceciliasnotes.share;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aadesh.paperleaf.share;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -901,7 +901,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = W9559HJWN9;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -965,7 +965,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = W9559HJWN9;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -996,11 +996,11 @@
 				CODE_SIGN_ENTITLEMENTS = CeciliasNotes/Resources/CeciliasNotes.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 3;
-				DEVELOPMENT_TEAM = W9559HJWN9;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = CeciliasNotes/Resources/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Cecilia's Notes";
+				INFOPLIST_KEY_CFBundleDisplayName = "Paperleaf";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1008,7 +1008,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 3.0;
-				PRODUCT_BUNDLE_IDENTIFIER = app.ceciliasnotes;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aadesh.paperleaf;
 				PRODUCT_MODULE_NAME = CeciliasNotes;
 				PRODUCT_NAME = CeciliasNotes;
 				REGISTER_APP_GROUPS = YES;
@@ -1032,11 +1032,11 @@
 				CODE_SIGN_ENTITLEMENTS = CeciliasNotes/Resources/CeciliasNotes.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 3;
-				DEVELOPMENT_TEAM = W9559HJWN9;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = CeciliasNotes/Resources/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Cecilia's Notes";
+				INFOPLIST_KEY_CFBundleDisplayName = "Paperleaf";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1044,7 +1044,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 3.0;
-				PRODUCT_BUNDLE_IDENTIFIER = app.ceciliasnotes;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aadesh.paperleaf;
 				PRODUCT_MODULE_NAME = CeciliasNotes;
 				PRODUCT_NAME = CeciliasNotes;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -1064,11 +1064,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = W9559HJWN9;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 26.4;
 				MARKETING_VERSION = 3.0;
-				PRODUCT_BUNDLE_IDENTIFIER = app.ceciliasnotes.tests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aadesh.paperleaf.tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -1086,11 +1086,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = W9559HJWN9;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 26.4;
 				MARKETING_VERSION = 3.0;
-				PRODUCT_BUNDLE_IDENTIFIER = app.ceciliasnotes.tests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aadesh.paperleaf.tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -1107,10 +1107,10 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = W9559HJWN9;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 3.0;
-				PRODUCT_BUNDLE_IDENTIFIER = app.ceciliasnotes.UITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aadesh.paperleaf.UITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -1127,10 +1127,10 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = W9559HJWN9;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 3.0;
-				PRODUCT_BUNDLE_IDENTIFIER = app.ceciliasnotes.UITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aadesh.paperleaf.UITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -1150,7 +1150,7 @@
 				CODE_SIGN_ENTITLEMENTS = CeciliasNotesWidget/CeciliasNotesWidget.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 3;
-				DEVELOPMENT_TEAM = W9559HJWN9;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CeciliasNotesWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = CeciliasNotesWidget;
@@ -1161,7 +1161,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 3.0;
-				PRODUCT_BUNDLE_IDENTIFIER = app.ceciliasnotes.widget;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aadesh.paperleaf.widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -1181,7 +1181,7 @@
 				CODE_SIGN_ENTITLEMENTS = CeciliasNotesWidget/CeciliasNotesWidget.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 3;
-				DEVELOPMENT_TEAM = W9559HJWN9;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CeciliasNotesWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = CeciliasNotesWidget;
@@ -1192,7 +1192,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 3.0;
-				PRODUCT_BUNDLE_IDENTIFIER = app.ceciliasnotes.widget;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aadesh.paperleaf.widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -1212,11 +1212,11 @@
 				CODE_SIGN_ENTITLEMENTS = CeciliasNotesMac/Resources/CeciliasNotesMac.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 3;
-				DEVELOPMENT_TEAM = W9559HJWN9;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = CeciliasNotesMac/Resources/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Cecilia's Notes";
+				INFOPLIST_KEY_CFBundleDisplayName = "Paperleaf";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1224,7 +1224,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 3.0;
-				PRODUCT_BUNDLE_IDENTIFIER = app.ceciliasnotes;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aadesh.paperleaf;
 				PRODUCT_MODULE_NAME = CeciliasNotesMac;
 				PRODUCT_NAME = CeciliasNotesMac;
 				SDKROOT = macosx;
@@ -1242,11 +1242,11 @@
 				CODE_SIGN_ENTITLEMENTS = CeciliasNotesMac/Resources/CeciliasNotesMac.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 3;
-				DEVELOPMENT_TEAM = W9559HJWN9;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = CeciliasNotesMac/Resources/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Cecilia's Notes";
+				INFOPLIST_KEY_CFBundleDisplayName = "Paperleaf";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1254,7 +1254,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 3.0;
-				PRODUCT_BUNDLE_IDENTIFIER = app.ceciliasnotes;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aadesh.paperleaf;
 				PRODUCT_MODULE_NAME = CeciliasNotesMac;
 				PRODUCT_NAME = CeciliasNotesMac;
 				SDKROOT = macosx;
@@ -1270,11 +1270,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = W9559HJWN9;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 3.0;
-				PRODUCT_BUNDLE_IDENTIFIER = app.ceciliasnotes.mac.tests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aadesh.paperleaf.mac.tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				STRING_CATALOG_GENERATE_SYMBOLS = NO;
@@ -1290,11 +1290,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = W9559HJWN9;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 3.0;
-				PRODUCT_BUNDLE_IDENTIFIER = app.ceciliasnotes.mac.tests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aadesh.paperleaf.mac.tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				STRING_CATALOG_GENERATE_SYMBOLS = NO;
@@ -1311,7 +1311,7 @@
 				CODE_SIGN_ENTITLEMENTS = CeciliasNotesShareExtension/CeciliasNotesShareExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 3;
-				DEVELOPMENT_TEAM = W9559HJWN9;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = CeciliasNotesShareExtension/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
@@ -1321,7 +1321,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 3.0;
-				PRODUCT_BUNDLE_IDENTIFIER = app.ceciliasnotes.share;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aadesh.paperleaf.share;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;

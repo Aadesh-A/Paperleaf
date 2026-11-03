@@ -8,7 +8,7 @@ import Foundation
 ///
 /// **Required Xcode setup:**
 /// - Both the main app and the `CeciliasNotesWidget` extension target must list the same
-///   App Group (`group.app.ceciliasnotes`) under
+///   App Group (`group.com.aadesh.paperleaf`) under
 ///   "Signing & Capabilities → App Groups".
 /// - The bundle identifier inside `Self.appGroup` must be the one configured.
 ///   Update the constant here to match.
@@ -17,7 +17,7 @@ actor WidgetDataWriter {
     static let shared = WidgetDataWriter()
 
     /// Replace with your App Group identifier. Used by both targets.
-    static let appGroup = "group.app.ceciliasnotes"
+    static let appGroup = "group.com.aadesh.paperleaf"
     private static let fileName = "ink_widget_data.json"
 
     private var pendingTask: Task<Void, Never>?

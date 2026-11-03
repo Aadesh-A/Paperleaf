@@ -1,4 +1,4 @@
-# Cecilia's Notes Share Extension — one-time setup
+# Paperleaf Share Extension — one-time setup
 
 The Swift sources, Info.plist and entitlements live in this folder so
 they're committed alongside the rest of the project, but the target
@@ -24,7 +24,7 @@ The script:
 2. Adds a new `app_extension` target named `CeciliasNotesShareExtension`.
 3. Registers the three files in this folder (Swift, Info.plist,
    entitlements) against the target.
-4. Sets the bundle id (`app.ceciliasnotes.share`), team
+4. Sets the bundle id (`com.aadesh.paperleaf.share`), team
    (`W9559HJWN9`), deployment target (17.6), code-sign style
    (Automatic), and the entitlement file path.
 5. Adds an "Embed App Extensions" copy-files phase on the host app
@@ -37,7 +37,7 @@ If anything goes wrong, restore with
 After it runs, open Xcode → Build (⌘B) the CeciliasNotes scheme. If
 the Signing & Capabilities pane on the new target doesn't show App
 Groups, click "+ Capability → App Groups" and tick
-`group.app.ceciliasnotes` (already registered for the main app, so
+`group.com.aadesh.paperleaf` (already registered for the main app, so
 the toggle is one click).
 
 ## Option B — manual Xcode steps
@@ -45,7 +45,7 @@ the toggle is one click).
 1. Open `CeciliasNotes.xcodeproj`.
 2. **File → New → Target… → Share Extension**.
    - Product name: `CeciliasNotesShareExtension`
-   - Bundle ID: `app.ceciliasnotes.share` (or whatever matches your
+   - Bundle ID: `com.aadesh.paperleaf.share` (or whatever matches your
      existing app ID prefix; the wildcard provisioning profile
      should cover it).
    - Embed in: `CeciliasNotes` (the main app target).
@@ -62,11 +62,11 @@ the toggle is one click).
    - `README.md` is documentation only — don't add to the target.
 6. **Signing & Capabilities** on the new target:
    - Add **App Groups** capability.
-   - Tick `group.app.ceciliasnotes` (already registered for the
+   - Tick `group.com.aadesh.paperleaf` (already registered for the
      main app).
 7. Build the extension scheme to verify it compiles.
 8. Run the main app; from any other app, share a PDF or image. The
-   share sheet should now list **Cecilia's Notes**. Selecting it
+   share sheet should now list **Paperleaf**. Selecting it
    drops the file into the shared app-group container at
    `<container>/ShareInbox/<uuid>.<ext>`.
 

@@ -2,7 +2,7 @@
 
 **Status: living document.** This is the authoritative spec for how
 external agents (the `cecilias-notes-mcp` server and any future MCP
-tooling) read from and write into Cecilia's Notes. Any change to the
+tooling) read from and write into Paperleaf. Any change to the
 importer, exporter, `.inkbook` schema, or transport MUST update this
 doc in the same commit. The change log at the bottom is the audit
 trail.
@@ -188,8 +188,8 @@ user-to-user sharing:
   formatting, images, audio, Pencil ink, sticky notes, shapes,
   highlights, PDF pages) and the media base64-embedded. IO lives
   in `NotebookArchiveIO` (export/import); registered as a document
-  type (UTI `app.ceciliasnotes.notebook`) in both targets so
-  tapping the file opens Cecilia's Notes and imports it as a fresh
+  type (UTI `com.aadesh.paperleaf.notebook`) in both targets so
+  tapping the file opens Paperleaf and imports it as a fresh
   editable copy (all new IDs — can't collide with the sender's).
 - **Transports**: system share sheet (Library → "Share Notebook…",
   for Drive / AirDrop / Mail) and the multipeer "Send to Device"

@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>Cecilia's Notes</string>
+	<string>Paperleaf</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIcons</key>
@@ -776,7 +776,7 @@
 	<array>
 		<dict>
 			<key>CFBundleURLName</key>
-			<string>app.ceciliasnotes</string>
+			<string>com.aadesh.paperleaf</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>ceciliasnotes</string>
@@ -798,14 +798,14 @@
 	<array>
 		<dict>
 			<key>CFBundleTypeName</key>
-			<string>Cecilia's Notes Notebook</string>
+			<string>Paperleaf Notebook</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSHandlerRank</key>
 			<string>Owner</string>
 			<key>LSItemContentTypes</key>
 			<array>
-				<string>app.ceciliasnotes.notebook</string>
+				<string>com.aadesh.paperleaf.notebook</string>
 			</array>
 		</dict>
 	</array>
@@ -813,9 +813,9 @@
 	<array>
 		<dict>
 			<key>UTTypeIdentifier</key>
-			<string>app.ceciliasnotes.notebook</string>
+			<string>com.aadesh.paperleaf.notebook</string>
 			<key>UTTypeDescription</key>
-			<string>Cecilia's Notes Notebook</string>
+			<string>Paperleaf Notebook</string>
 			<key>UTTypeConformsTo</key>
 			<array>
 				<string>public.data</string>
@@ -833,15 +833,15 @@
 	<key>LSApplicationCategoryType</key>
 	<string>public.app-category.productivity</string>
 	<key>NSCameraUsageDescription</key>
-	<string>Cecilia's Notes lets you photograph and insert images directly into your notes.</string>
+	<string>Paperleaf lets you photograph and insert images directly into your notes.</string>
 	<key>NSMicrophoneUsageDescription</key>
-	<string>Cecilia's Notes records audio for your notes. Recordings are stored on your device and never uploaded.</string>
+	<string>Paperleaf records audio for your notes. Recordings are stored on your device and never uploaded.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Cecilia's Notes lets you insert photos from your photo library into your notes.</string>
+	<string>Paperleaf lets you insert photos from your photo library into your notes.</string>
 	<key>NSSpeechRecognitionUsageDescription</key>
-	<string>Cecilia's Notes transcribes your recordings locally on your device using Apple's speech recognition.</string>
+	<string>Paperleaf transcribes your recordings locally on your device using Apple's speech recognition.</string>
 	<key>NSLocalNetworkUsageDescription</key>
-	<string>Cecilia's Notes uses the local network to sync notebooks with your nearby iPhone, iPad, or Mac — no cloud round-trip needed.</string>
+	<string>Paperleaf uses the local network to sync notebooks with your nearby iPhone, iPad, or Mac — no cloud round-trip needed.</string>
 	<key>NSBonjourServices</key>
 	<array>
 		<string>_cn-sync._tcp</string>
@@ -849,7 +849,7 @@
 	</array>
 	<key>NSUserActivityTypes</key>
 	<array>
-		<string>app.ceciliasnotes.page</string>
+		<string>com.aadesh.paperleaf.page</string>
 	</array>
 	<key>UIAppFonts</key>
 	<array/>

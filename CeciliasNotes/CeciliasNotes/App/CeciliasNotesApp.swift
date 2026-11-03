@@ -295,7 +295,7 @@ struct CeciliasNotesApp: App {
 
                     // Share-extension ingest: watch the app-group
                     // ShareInbox for files dropped by the iOS share
-                    // sheet (Files → Cecilia's Notes, Safari → Cecilia's
+                    // sheet (Files → Paperleaf, Safari → Cecilia's
                     // Notes, etc.). Idempotent; safe to call on every
                     // cold launch.
                     ShareInboxWatcher.shared.start()

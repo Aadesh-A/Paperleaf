@@ -1,5 +1,5 @@
 /// AnnotationListSheet.swift
-/// Cecilia's Notes
+/// Paperleaf
 ///
 /// Pass C of the PDF-annotation feature set: the half-height sheet
 /// the customise panel's annotation count row opens. Lists every

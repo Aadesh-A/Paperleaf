@@ -1,4 +1,4 @@
-# Cecilia's Notes — Architecture
+# Paperleaf — Architecture
 
 A reference document for the development team. Bullet points and short
 paragraphs are preferred over prose; this is a reference, not a tutorial.
@@ -12,7 +12,7 @@ paragraphs are preferred over prose; this is a reference, not a tutorial.
 
 ## App overview
 
-- **Cecilia's Notes** — handwriting-first note-taking for iPad with
+- **Paperleaf** — handwriting-first note-taking for iPad with
   on-device intelligence.
 - **Deployment target:** iOS 18.4. iPad only (`TARGETED_DEVICE_FAMILY`
   set in build settings).
@@ -34,7 +34,7 @@ outside the codebase: the `ink://` URL scheme, the
 `group.com.wave.venu.Ink` App Group, `Application Support/Ink/` as
 the on-disk data root, `ink.*` UserDefaults keys, and the schema
 family (`InkSchemaV1`…`V5`, renamed atomically with the next V6 bump).
-User-facing copy is "Cecilia's Notes".
+User-facing copy is "Paperleaf".
 
 ---
 

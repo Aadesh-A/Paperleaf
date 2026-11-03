@@ -1,6 +1,6 @@
 # Copyright & License
 
-Cecilia's Notes is an open-source project released under the MIT License.
+Paperleaf is an open-source project released under the MIT License.
 
 ## MIT License
 

@@ -118,6 +118,8 @@ struct NotebookGridView: View {
     /// into folder" is a primary action.
     private var levelFolders:   [Folder]   { viewModel.foldersAtCurrentLevel }
     private var levelNotebooks: [Notebook] { viewModel.notebooksAtCurrentLevel }
+    private var favoriteNotebooks: [Notebook] { levelNotebooks.filter(\.isPinned) }
+    private var regularNotebooks: [Notebook] { levelNotebooks.filter { !$0.isPinned } }
 
     @ViewBuilder
     private var gridArea: some View {
@@ -125,34 +127,41 @@ struct NotebookGridView: View {
             emptyState
         } else {
             ScrollView {
-                LazyVGrid(columns: columns, spacing: 16) {
-                    ForEach(levelFolders) { folder in
-                        FolderCardView(folder: folder, viewModel: viewModel)
-                            .frame(maxWidth: .infinity)
-                            .frame(width: cardWidth, height: 200)
-                            .transition(.scale(scale: 0.85).combined(with: .opacity))
+                VStack(alignment: .leading, spacing: 24) {
+                    if !favoriteNotebooks.isEmpty {
+                        favoritesRail
                     }
 
-                    ForEach(levelNotebooks) { notebook in
-                        notebookCard(notebook)
+                    LazyVGrid(columns: columns, spacing: 16) {
+                        ForEach(levelFolders) { folder in
+                            FolderCardView(folder: folder, viewModel: viewModel)
+                                .frame(maxWidth: .infinity)
+                                .frame(width: cardWidth, height: 200)
+                                .transition(.scale(scale: 0.85).combined(with: .opacity))
+                        }
+
+                        ForEach(regularNotebooks) { notebook in
+                            notebookCard(notebook)
+                        }
+                    }
+                    .animation(.ceciliasNotesSpring(CeciliasNotesSpring.smooth), value: levelFolders.map(\.id))
+                    .animation(.ceciliasNotesSpring(CeciliasNotesSpring.smooth), value: levelNotebooks.map(\.id))
+                    .background {
+                        #if os(macOS)
+                        Color.clear
+                            .contentShape(Rectangle())
+                            .onTapGesture {
+                                viewModel.macGridFocusedNotebookId = nil
+                            }
+                        #endif
                     }
                 }
+                .frame(maxWidth: .infinity, alignment: .leading)
                 // 24pt of breathing room between the masthead's bottom
                 // rule and the first row of cards.
                 .padding(.top, 24)
                 .padding(.horizontal, 16)
                 .padding(.bottom, 32)
-                .animation(.ceciliasNotesSpring(CeciliasNotesSpring.smooth), value: levelFolders.map(\.id))
-                .animation(.ceciliasNotesSpring(CeciliasNotesSpring.smooth), value: levelNotebooks.map(\.id))
-                .background {
-                    #if os(macOS)
-                    Color.clear
-                        .contentShape(Rectangle())
-                        .onTapGesture {
-                            viewModel.macGridFocusedNotebookId = nil
-                        }
-                    #endif
-                }
             }
             // Scrolling the grid dismisses any open inline-rename
             // keyboard immediately. Works for floating + docked
@@ -162,6 +171,33 @@ struct NotebookGridView: View {
             .scrollDismissesKeyboard(.immediately)
             .onAppear { seedGridKeyboardFocusIfNeeded() }
             .onChange(of: levelNotebooks.map(\.id)) { _, _ in seedGridKeyboardFocusIfNeeded() }
+        }
+    }
+
+    private var favoritesRail: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            HStack(spacing: 7) {
+                Image(systemName: "star.fill")
+                    .foregroundStyle(theme.accent)
+                Text("Favorites")
+                    .font(.system(size: 13, weight: .semibold, design: .rounded))
+                    .foregroundStyle(theme.foreground)
+                Text("\(favoriteNotebooks.count)")
+                    .font(.system(size: 11, weight: .medium, design: .rounded))
+                    .foregroundStyle(theme.foregroundMuted)
+                Spacer()
+            }
+            .accessibilityElement(children: .combine)
+
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack(spacing: 14) {
+                    ForEach(favoriteNotebooks) { notebook in
+                        NotebookCardView(notebook: notebook, viewModel: viewModel)
+                            .frame(width: 168, height: 224)
+                    }
+                }
+                .padding(.trailing, 8)
+            }
         }
     }
 
@@ -260,6 +296,7 @@ struct NotebookGridView: View {
                     .foregroundColor(theme.foreground)
                     .autocorrectionDisabled()
                     .submitLabel(.search)
+                    .onSubmit { viewModel.commitSearch() }
                 if !viewModel.searchText.isEmpty {
                     Button {
                         viewModel.searchText = ""
@@ -281,12 +318,61 @@ struct NotebookGridView: View {
             CeciliasNotesDivider()
 
             if viewModel.searchText.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
-                Spacer()
+                recentSearches
             } else if let results = viewModel.searchResults, !results.isEmpty {
                 SearchResultsView(results: results, query: viewModel.searchText, viewModel: viewModel)
             } else if viewModel.searchResults != nil {
                 searchEmptyState
             } else {
+                Spacer()
+            }
+        }
+    }
+
+    @ViewBuilder
+    private var recentSearches: some View {
+        if viewModel.recentSearches.isEmpty {
+            EditorialEmptyState(
+                primary: "search your whole library.",
+                secondary: "handwriting, typed notes, PDFs, and transcripts."
+            )
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+        } else {
+            VStack(alignment: .leading, spacing: 8) {
+                HStack {
+                    Text("Recent searches")
+                        .font(.system(size: 12, weight: .semibold, design: .rounded))
+                        .foregroundStyle(theme.foregroundMuted)
+                    Spacer()
+                    Button("Clear") { viewModel.clearRecentSearches() }
+                        .font(.system(size: 11, weight: .medium, design: .rounded))
+                        .foregroundStyle(theme.accent)
+                        .buttonStyle(.plain)
+                }
+                .padding(.horizontal, 24)
+                .padding(.top, 12)
+
+                ForEach(viewModel.recentSearches, id: \.self) { query in
+                    Button {
+                        viewModel.useRecentSearch(query)
+                    } label: {
+                        HStack(spacing: 12) {
+                            Image(systemName: "clock.arrow.circlepath")
+                                .foregroundStyle(theme.foregroundSubtle)
+                            Text(query)
+                                .foregroundStyle(theme.foreground)
+                            Spacer()
+                            Image(systemName: "arrow.up.left")
+                                .font(.system(size: 11, weight: .semibold))
+                                .foregroundStyle(theme.foregroundSubtle)
+                        }
+                        .font(.system(size: 14, weight: .regular, design: .rounded))
+                        .padding(.horizontal, 24)
+                        .frame(height: 44)
+                        .contentShape(Rectangle())
+                    }
+                    .buttonStyle(.plain)
+                }
                 Spacer()
             }
         }

@@ -1,4 +1,4 @@
-# Cecilia's Notes — Robustness & Threading Map
+# Paperleaf — Robustness & Threading Map
 
 Last updated: 2026-07-12. Documents how major processes run, which thread owns them, known race/ANR/crash risks, and what was hardened in the robustness pass.
 

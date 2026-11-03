@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# Scripts/run-tests.sh — the verification gate for Cecilia's Notes.
+# Scripts/run-tests.sh — the verification gate for Paperleaf.
 #
 # Run this after ANY code change, before pushing. It runs every suite
 # that has ever caught a real regression in this project, in the order

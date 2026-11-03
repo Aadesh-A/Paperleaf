@@ -6,12 +6,12 @@ Last updated: 2026-07-18
 
 ## Elevator pitch
 
-Cecilia's Notes is a Zara-editorial handwriting-first note-taking app. Two Xcode targets share one SwiftUI codebase over a SwiftData + CloudKit store, with MultipeerConnectivity for local peer sync:
+Paperleaf is a Zara-editorial handwriting-first note-taking app. Two Xcode targets share one SwiftUI codebase over a SwiftData + CloudKit store, with MultipeerConnectivity for local peer sync:
 
 - `CeciliasNotes` — iPad + iPhone (primary; handwriting on iPad only)
 - `CeciliasNotesMac` — Mac companion (read strokes, edit typed content + media)
 
-Universal Purchase, shared bundle id `app.ceciliasnotes`, shared CloudKit container `iCloud.app.ceciliasnotes`, shared App Group `group.app.ceciliasnotes`.
+Universal Purchase, shared bundle id `com.aadesh.paperleaf`, shared CloudKit container `iCloud.com.aadesh.paperleaf`, shared App Group `group.com.aadesh.paperleaf`.
 
 ## Current phase
 
@@ -192,7 +192,7 @@ Still partial on Mac (p2 / platform limits): image crop on iPad, per-page custom
 ## Production checklist — Mac (2026-07-06)
 
 - **Icons** — `CeciliasNotesMac/Resources/Assets.xcassets` (16–512 @1x/@2x) generated from iPad `AppIcon-1024.png`
-- **Build** — `CURRENT_PROJECT_VERSION = 2` aligned with iOS; Universal Purchase bundle `app.ceciliasnotes`
+- **Build** — `CURRENT_PROJECT_VERSION = 2` aligned with iOS; Universal Purchase bundle `com.aadesh.paperleaf`
 - **Entitlements** — iCloud, App Group, hardened runtime, local network + Bonjour for Multipeer
 - **Privacy strings** — microphone, speech, local network in `Info.plist`
 - **App Store copy** — see `APP_STORE_COPY.md` Mac subtitle + description block
@@ -276,7 +276,7 @@ Documentation index:
 
   Persistence: SwiftData (CoreData under the hood) → CloudKit private db
   Local sync : MultipeerSyncService (Bonjour _cn-sync._tcp)
-  App Group  : group.app.ceciliasnotes — widgets + name mirroring
+  App Group  : group.com.aadesh.paperleaf — widgets + name mirroring
   Message bus: NotificationCenter — see CODE_GRAPH.md § Notification bus
 ```
 
@@ -347,7 +347,7 @@ This rewrites `Documentation/CODE_GRAPH.md` and `Documentation/CODE_GRAPH.json`.
 
 - **Handwriting is iPad-only, forever.** Mac reads strokes, doesn't author them. Do not add PencilKit UI to the Mac target.
 - **Swift 6 strict concurrency is on.** `UIImage` is `@MainActor` — image encoding goes through `PlatformImageFactory` in `PlatformKit.swift` (ImageIO-backed) to avoid main-actor inference.
-- **Bundle ID `app.ceciliasnotes` is shared** between iOS and Mac targets for Universal Purchase — do not change it, and do not add per-target suffixes.
+- **Bundle ID `com.aadesh.paperleaf` is shared** between iOS and Mac targets for Universal Purchase — do not change it, and do not add per-target suffixes.
 - **The Zara editorial language is load-bearing.** 8pt tracked uppercase eyebrows, 11pt italic serif rows, SF Heavy wordmark, 96pt GhostLetter, 2pt selection rule. Chrome should be quiet — never a permanent floating warning strip.
 - **`UIColor(dynamicProvider:)` / `NSColor(name:dynamicProvider:)` closures MUST be `@Sendable` over pre-resolved colors.** UIKit resolves dynamic colors on whatever thread asks — including SwiftUI's `AsyncRenderer` render thread, WHILE HOLDING SwiftUI's render-graph lock. An unannotated provider closure inherits @MainActor under default isolation → runtime isolation assert → SIGTRAP on the render thread with the lock held. Attached to Xcode the trap suspends the process in lldb and main deadlocks on that lock inside `touchesBegan` — the app reads as a total silent freeze (no logs, watchdog suspended); detached it's an instant crash. Confirmed by device `.ips` 2026-07-11 (`Color.init(light:dark:)` in `CeciliasNotesColors.swift`, thread `com.apple.SwiftUI.AsyncRenderer`; main blocked in `EventBindingBridge.send → _MovableLockLock`).
 - **Never form a closure for a background-invoking framework API in a MainActor context under a `@preconcurrency` import.** The app builds with `SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor`; `@preconcurrency import` silences the compile-time isolation check, so the closure silently inherits @MainActor and the isolation assert fires AT RUNTIME on the framework's queue — `dispatch_assert_queue_fail` → SIGTRAP in Release. This exact bug shipped in build 2.1(1) and crashed App Store review twice: the `installTap` audio-tap closures in `AudioRecorder.start` and `LectureRecorder` were formed on the main actor and invoked on AVFAudio's RealtimeMessenger queue. Rule: form such closures in `nonisolated` functions or inside `Task.detached`, or mark them `@Sendable` explicitly (extracting non-Sendable framework objects into plain values before any MainActor hop).

@@ -1,5 +1,5 @@
 /// PencilProSupport.swift
-/// Cecilia's Notes
+/// Paperleaf
 ///
 /// Capability detection + setting enums for Apple Pencil Pro
 /// squeeze gesture. Used by Settings to gate the squeeze section

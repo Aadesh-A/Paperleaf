@@ -2,7 +2,7 @@ import SwiftUI
 
 // MARK: - CeciliasNotesPressableButtonStyle
 
-/// Default press feedback for every tappable surface in Cecilia's Notes.
+/// Default press feedback for every tappable surface in Paperleaf.
 ///
 /// On touch-down: scales to 0.96 and dims to 95% opacity.
 /// On release:    snaps back via a short interactive spring.
@@ -30,7 +30,7 @@ public struct CeciliasNotesPressableButtonStyle: ButtonStyle {
 
 public extension ButtonStyle where Self == CeciliasNotesPressableButtonStyle {
     /// `Button(...).buttonStyle(.ceciliasNotesPressable)` — the standard press feedback
-    /// for every interactive surface in Cecilia's Notes.
+    /// for every interactive surface in Paperleaf.
     static var ceciliasNotesPressable: CeciliasNotesPressableButtonStyle { CeciliasNotesPressableButtonStyle() }
 }
 

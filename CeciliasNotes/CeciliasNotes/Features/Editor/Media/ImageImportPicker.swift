@@ -1,5 +1,5 @@
 /// ImageImportPicker.swift
-/// Cecilia's Notes
+/// Paperleaf
 ///
 /// Source-of-image picker for the image attachment feature. Three
 /// rows: Camera, Photo Library, Files. Each presents its own
